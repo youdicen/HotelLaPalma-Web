@@ -163,6 +163,73 @@
             color: #666;
             font-size: 0.95rem;
         }
+
+        /* Testimonials Section */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-md);
+        }
+
+        .review-card {
+            background-color: var(--color-bg-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '”';
+            font-family: Georgia, serif;
+            font-size: 6rem;
+            color: rgba(0, 0, 0, 0.05);
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            line-height: 1;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-accent-yellow);
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--color-earth-dark);
+            margin-bottom: 2px;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
     </style>
 </head>
 
@@ -340,6 +407,59 @@
         </div>
     </section>
 
+    <!-- Opiniones Destacadas -->
+    <section class="container" style="margin-bottom: 80px;">
+        <h2
+            style="text-align: center; color: var(--color-earth-dark); margin-bottom: var(--space-md); font-size: clamp(2rem, 3vw, 2.5rem);">
+            Lo Que Dicen Nuestros Huéspedes
+        </h2>
+        <p
+            style="text-align: center; color: #666; margin-bottom: var(--space-lg); max-width: 600px; margin-inline: auto;">
+            Más de 200 reseñas en Google nos recomiendan. Conoce las experiencias de quienes ya nos visitaron.
+        </p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocIw1zUIwqMCDU_MET_PPUpDcwyEyNec8KxA2t1tZXw1cnJ-LV0=s1920-c-rp-mo-br100"
+                        alt="Rubén Jacinto">
+                    <div>
+                        <h4 class="reviewer-name">Rubén Jacinto</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">"Experiencia única, contacto con la naturaleza y su clima es perfecto. Su
+                    personal es muy amable y alegre. Recomiendo bastante el Hotel La Palma."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjXUMoS2-FQtWixdt2OOpYHkVkAG8pI9WmRs817CEhULY20OEw8E=s1920-c-rp-mo-br100"
+                        alt="Gaddiel Ramos">
+                    <div>
+                        <h4 class="reviewer-name">Gaddiel Ramos</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">"Excelente experiencia. El lugar es muy bonito, tranquilo y rodeado de
+                    naturaleza, ideal para descansar y desconectarse. Las habitaciones son cómodas y limpias, y el
+                    ambiente es muy acogedor. El personal es amable..."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWLP2F4ksePiJmBvR6oIUKJKmwIyRS3eASxpvSVbO8AwYujk_KWNA=s1920-c-rp-mo-ba5-br100"
+                        alt="D. Cruz">
+                    <div>
+                        <h4 class="reviewer-name">D. Cruz</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">"This has to be one of the best hotels I've ever stayed at. There's so much to do
+                    and it's so relaxing that it feels like there's no reason to ever leave. The staff was so friendly
+                    and welcoming..."</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Compartido -->
     <footer class="footer">
