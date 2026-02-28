@@ -25,9 +25,23 @@ except Exception as e:
     print(f"Error starting Apify actor: {e}")
     exit(1)
 
+import time
+
 print(f"Run ID: {run_id}. Waiting for it to finish...")
-wait_url = f"https://api.apify.com/v2/actor-runs/{run_id}/waitForFinish?token={APIFY_TOKEN}"
-requests.get(wait_url)
+status = "RUNNING"
+while status in ["READY", "RUNNING"]:
+    time.sleep(5)
+    run_status_res = requests.get(f"https://api.apify.com/v2/actor-runs/{run_id}?token={APIFY_TOKEN}")
+    if run_status_res.status_code == 200:
+        status = run_status_res.json()['data']['status']
+        print(f"Current status: {status}")
+    else:
+        print("Error checking status")
+        break
+
+if status != "SUCCEEDED":
+    print(f"Run did not succeed. Status: {status}")
+    exit(1)
 
 print("2. Fetching dataset items...")
 dataset_url = f"https://api.apify.com/v2/datasets/{dataset_id}/items?token={APIFY_TOKEN}&format=json"
