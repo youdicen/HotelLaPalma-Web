@@ -56,20 +56,17 @@ except Exception as e:
 print(f"Found {len(items)} posts in dataset.")
 
 html_slides = []
+blog_posts_html = []
 valid_posts = 0
 
 for post in items:
-    if valid_posts >= 5:
-        break
-    
-    # We only want posts with an image/video thumbnail to look good in the carousel
+    # We only want posts with an image/video thumbnail to look good in the carousel and blog
+
     media = post.get('media', [])
-    if not media:
-        continue
-        
-    img_url = media[0].get('thumbnail') or media[0].get('url')
-    if not img_url:
-        continue
+    img_url = '2022-07-13.webp'
+    if media:
+        img_url = media[0].get('thumbnail') or media[0].get('url') or '2022-07-13.webp'
+
         
     text = post.get('text', '')
     if text and len(text) > 150:
@@ -87,13 +84,34 @@ for post in items:
             
     post_url = post.get('url', '#')
     
-    slide_html = f'''            <div class="hero-slide">
-                <div class="hero-background" style="background-image: url('{img_url}');"></div>
+    # --- For Blog (All valid posts) ---
+    blog_html = f'''            <article class="blog-post">
+                <img src="{img_url}" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">{date_str}</div>
+                    <div class="blog-text">{text}</div>
+                    <div class="blog-btn-container">
+                        <a href="{post_url}" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>'''
+    blog_posts_html.append(blog_html)
+    
+    # --- For Carousel (Only first 5 valid posts) ---
+    if valid_posts < 5:
+        short_text = text
+        if short_text and len(short_text) > 150:
+            short_text = short_text[:147] + "..."
+            
+        slide_html = f'''            <div class="hero-slide">
+                <img class="hero-background" src="{img_url}" onerror="this.onerror=null; this.src='2022-07-13.webp';" style="object-fit: cover;">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
                     <h2 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 20px;">{date_str}</h2>
                     <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 30px auto;">
-                        {text}
+                        {short_text}
                     </p>
                     <a href="{post_url}" target="_blank" class="btn btn-primary"
                         style="font-size: 1.1rem; padding: 12px 30px; border: 2px solid var(--color-accent-blue); background-color: var(--color-accent-blue); color: var(--color-text-light);">
@@ -101,8 +119,8 @@ for post in items:
                     </a>
                 </div>
             </div>'''
-    html_slides.append(slide_html)
-    valid_posts += 1
+        html_slides.append(slide_html)
+        valid_posts += 1
 
 if not html_slides:
     print("No valid posts found with media. Nothing to update.")
@@ -126,4 +144,23 @@ try:
     print("Success! index.html has been updated with the latest Facebook posts.")
 except Exception as e:
     print(f"Error updating index.html: {e}")
-    exit(1)
+
+if blog_posts_html:
+    print("4. Updating blog.html...")
+    try:
+        if os.path.exists('blog.html'):
+            with open('blog.html', 'r', encoding='utf-8') as f:
+                bhtml = f.read()
+
+            bpattern = re.compile(r'(<!-- AUTOMATIC_BLOG_INSERTION_POINT -->)(.*?)(</div>\s*</main>)', re.DOTALL)
+            b_new_html = bpattern.sub(r'\1\n' + "\n".join(blog_posts_html) + r'\n\3', bhtml)
+            
+            with open('blog.html', 'w', encoding='utf-8') as f:
+                f.write(b_new_html)
+                
+            print("Success! blog.html has been updated.")
+        else:
+            print("blog.html not found, skipping blog update.")
+    except Exception as e:
+        print(f"Error updating blog.html: {e}")
+        exit(1)

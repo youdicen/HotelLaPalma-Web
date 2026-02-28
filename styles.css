@@ -264,6 +264,50 @@ img {
   width: 100%;
 }
 
+/* Dropdown */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-earth-dark);
+  min-width: 250px;
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  border-top: 3px solid var(--color-accent-yellow);
+  flex-direction: column;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: flex;
+}
+
+.nav-dropdown-content li {
+  width: 100%;
+}
+
+.nav-dropdown-content a {
+  padding: 15px 20px;
+  display: block;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-dropdown-content a::after {
+  display: none;
+  /* remove yellow underline on hover for dropdown items */
+}
+
+.nav-dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -350,6 +394,26 @@ img {
   }
 
   .nav-links.active {
+    display: flex;
+  }
+
+  .nav-dropdown {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-dropdown-content {
+    position: static;
+    display: none;
+    background-color: transparent;
+    border-top: none;
+    padding-left: var(--space-md);
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .nav-dropdown.active .nav-dropdown-content,
+  .nav-dropdown:hover .nav-dropdown-content {
     display: flex;
   }
 
@@ -476,32 +540,33 @@ img {
     padding: 0 50px;
   }
 }
+
 /* Botón Flotante WhatsApp */
 .whatsapp-float {
-    position: fixed;
-    width: 65px;
-    height: 65px;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .whatsapp-float:hover {
-    background-color: #20b858;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 2px 5px 15px rgba(0,0,0,0.4);
+  background-color: #20b858;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .whatsapp-icon {
-    width: 40px;
-    height: 40px;
-    fill: white;
+  width: 40px;
+  height: 40px;
+  fill: white;
 }

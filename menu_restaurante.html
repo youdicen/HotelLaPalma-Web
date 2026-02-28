@@ -115,11 +115,17 @@
             <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="historia.html">Historia y Diseño Ecológico</a></li>
-                <li><a href="experiencias.html">Turismo Naíf</a></li>
-                <li><a href="restaurante.html">Restaurante y Relajación</a></li>
-                <li><a href="menu_restaurante.html" class="active">Menú</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle active" onclick="event.preventDefault(); this.parentElement.classList.toggle('active')">Turismo Naíf ▾</a>
+                    <ul class="nav-dropdown-content">
+                        <li><a href="historia.html">Historia y Diseño Ecológico</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="restaurante.html">Restaurante y Relajación</a></li>
+                        <li><a href="menu_restaurante.html" class="active">Menú</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">RESERVAR</a></li>
             </ul>
         </div>
     </nav>
@@ -252,6 +258,7 @@
                         <li><a href="experiencias.html">Experiencias Naíf</a></li>
                         <li><a href="restaurante.html">Restaurante</a></li>
                         <li><a href="menu_restaurante.html">Menú</a></li>
+                <li><a href="blog.html">Blog</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -281,9 +288,8 @@
 
     <!-- Botón Flotante de WhatsApp -->
     <a href="https://wa.me/50370100373?text=Hola%20Hotel%20La%20Palma,%20me%20interesa%20hacer%20una%20reserva." class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
-        <svg viewBox="0 0 32 32" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2.003c-7.72 0-14 6.277-14 14.004 0 2.454.634 4.838 1.83 6.942L2 29.988l7.194-1.886A13.882 13.882 0 0016 30.015c7.72 0 14-6.28 14-14.008S23.72 2.003 16 2.003zm0 23.336c-2.074 0-4.106-.554-5.882-1.61l-.42-.25-4.372 1.147 1.168-4.26-.275-.436A11.666 11.666 0 014.332 16.007c0-6.438 5.238-11.673 11.67-11.673 3.12 0 6.05 1.216 8.256 3.424 2.205 2.207 3.42 5.14 3.42 8.25-.004 6.436-5.24 11.67-11.678 11.67z" fill="currentColor"/>
-            <path d="M21.927 18.25c-.322-.16-1.92-.95-2.217-1.06-.296-.108-.512-.16-.728.16-.216.322-.84 1.058-1.033 1.275-.192.215-.384.24-.707.08m-.706.08c-1.455-.73-2.906-1.554-4.22-2.613-1.066-1.008-1.876-2.222-2.315-3.52-.16-.298-.016-.458.145-.618.145-.145.32-.373.48-.56.162-.186.216-.32.324-.533.106-.213.053-.4-.027-.56-.08-.16-.727-1.758-.996-2.404-.265-.63-.535-.544-.73-.553-.187-.01-.4-.012-.616-.012s-.564.08-.86.4c-.295.32-1.127 1.1-1.127 2.68 0 1.58 1.155 3.11 1.315 3.322.162.214 2.268 3.46 5.496 4.85 2.106.9 2.89.97 3.96.815.908-.13 2.607-1.063 2.972-2.09.366-1.028.366-1.907.257-2.09z" fill="currentColor"/>
+        <svg viewBox="0 0 16 16" class="whatsapp-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </a>
 </body>

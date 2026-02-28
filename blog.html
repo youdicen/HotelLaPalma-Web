@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Hotel La Palma</title>
+    <meta name="description" content="Entérate de nuestras últimas novedades, experiencias y eventos a través de nuestro blog.">
+    <!-- Estilos Globales -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CSS Específico para el Blog -->
+    <style>
+        .page-header {
+            background-color: var(--color-earth-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: var(--space-xl) var(--space-sm) var(--space-lg);
+            border-bottom: 8px solid var(--color-accent-blue);
+        }
+
+        .page-header h1 {
+            color: var(--color-accent-yellow);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            padding: var(--space-xl) 0;
+        }
+
+        .blog-post {
+            background-color: var(--color-bg-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border-top: 5px solid var(--color-accent-yellow);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+            border-top-color: var(--color-accent-red);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--color-earth-light);
+        }
+
+        .blog-content {
+            padding: var(--space-md);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-date {
+            color: var(--color-accent-blue);
+            font-size: 0.95rem;
+            font-weight: bold;
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blog-text {
+            color: var(--color-earth-dark);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+            flex-grow: 1;
+            white-space: pre-wrap;
+        }
+
+        .blog-btn-container {
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-bg-offwhite">
+    <!-- Barra decorativa -->
+    <div class="decor-line"></div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo.png" alt="Hotel La Palma Logo" height="40">
+                Hotel La <span>Palma</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle active" onclick="event.preventDefault(); this.parentElement.classList.toggle('active')">Turismo Naíf ▾</a>
+                    <ul class="nav-dropdown-content">
+                        <li><a href="historia.html">Historia y Diseño Ecológico</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="restaurante.html">Restaurante y Relajación</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">RESERVAR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Blog & Novedades</h1>
+            <p>Conoce nuestras últimas noticias, eventos y actualizaciones directas desde nuestra comunidad.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="blog-grid">
+            <!-- AUTOMATIC_BLOG_INSERTION_POINT -->
+            <article class="blog-post">
+                <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t51.82787-15/641708065_18528726409065600_8258153208539127220_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=dD5mEm9ON6EQ7kNvwFZC-M-&_nc_oc=AdmYoqOqphM99QsAXCR_7S9N8XsjRS_GJNWdSekoX6qV8xitjsYL6gjFA_QmYz2OpZE&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=oKY0_7tYSUJue4qXmR728w&_nc_ss=8&oh=00_AfsZ1Ls9a2E4SqtybmbPUwqC6NlGTYcXBKCxk0JhRG3MUA&oe=69A84E13" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">27 Feb 2026</div>
+                    <div class="blog-text">El arte aprender a hacer piezas de barro…es una experiencia que no te recomendamos saltar cuando vengas a La Palma
+📩 Escríbeno
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0q7pnpyeLwwC6Ynapwzc8oTNja6qD2nx4oM7CWrUG9XZ4gdJMR63BnWvWC9t6zUMkl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t51.71878-10/640422936_893431927018146_2425652064639747052_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=gxQxAsuhb1MQ7kNvwHA2Z79&_nc_oc=AdkbcK0zNduNeFtjDyzJ84dKACu950SCYlFeVNAbFbd08EX3f-nAo7CE9y5bwYkH5MQ&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=oKY0_7tYSUJue4qXmR728w&_nc_ss=8&oh=00_AfvrCkGuFH1sBZ-VFT9UroHPn3Rgna8plldjT1Drbpwmng&oe=69A84751" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">26 Feb 2026</div>
+                    <div class="blog-text">Ven a la montaña a sentirte libre y a disfrutar de una clase de cerámica, ¿que harías en el torno? Una taza, un plato o una maceta 🤔 ¡te leemos!
+
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/1587355199153787/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/641515558_1322198766607562_5986853636861484589_n.png?stp=dst-png_p180x540&_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=AC_-6Jcb78AQ7kNvwHdQU7o&_nc_oc=Adma4Pyj6GA55Uo06EtQNNeFV2nZ_4dc78sGTbFv9ich2FMwfSGwwIzsQTLLIW70jbQ&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=oKY0_7tYSUJue4qXmR728w&_nc_ss=8&oh=00_AftP8e1tLH7ZLGoCKGnhqXRbd-yeZcYy6ygm8JLiW52hug&oe=69A85A1F" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">26 Feb 2026</div>
+                    <div class="blog-text"></div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/891659977076277:891659977076277" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid0wxhFNhzSV5WGpWcJAWAXZCY9sjQ7ig3A2YWMqcZDVrg1XawbYsr6ZMekA2j84H8Ql" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">25 Feb 2026</div>
+                    <div class="blog-text">¿Estás buscando el lugar perfecto para realizar tus eventos? ✨
+Te presentamos nuestro Salón Miramundo, el espacio ideal para:
+✔ Capacitaciones
+✔ Talleres
+✔ Seminarios
+Rodeado de naturaleza, con un ambiente fresco, tranquilo y lleno de inspiración 🌿
+Porque el entorno sí importa… y aquí cada experiencia se vive mejor. ✅
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0wxhFNhzSV5WGpWcJAWAXZCY9sjQ7ig3A2YWMqcZDVrg1XawbYsr6ZMekA2j84H8Ql" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/641602011_1320665876760851_6216037511490959264_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=rOxQRjmWdKUQ7kNvwGpMOzO&_nc_oc=AdlqrIPbQTUj8Mab-pLKqsAulR6w1PC8IwVL4qOQqlGyzprmatjg04UwxCx0rB9h_uQ&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=lYGBNpWXnPCHxA_p256k6w&_nc_ss=8&oh=00_Aft1UJtg20QFGQstrXbryaS2VzSfuCwZAVBKd6P191J91w&oe=69A84345" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">24 Feb 2026</div>
+                    <div class="blog-text">Aquí la #tortamexicana sabe diferente… porque el pan lo hacemos nosotros y la frescura viene de la zona alta.
+
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02eDw8T7rByLruTFJVCSPDw4wt1btAGkNKw7jGGn4mti8gtQRVNzuegGECr1oDsw14l" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lax7-1.xx.fbcdn.net/v/t51.82787-15/639781303_18527902141065600_2685682261471221627_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=s7cv9yIhq70Q7kNvwGoFpwx&_nc_oc=AdmxbTLPG2uyMVN_HJgO2a_Vf7KTvS16ZYqvD3qfI-ogwBloaBTcmNGkbF2SWWTC4sg&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=lYGBNpWXnPCHxA_p256k6w&_nc_ss=8&oh=00_Afti38FIsotAPim6of9BqR4j_TP9y64lR81Ua6xbX-fNSA&oe=69A8756B" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">22 Feb 2026</div>
+                    <div class="blog-text">¿Te gustan los murales y la historia? Entonces este tour es para ti 😎🥾
+
+📲 Reserva tu mesa en nuestra terraza y haz de tu próxima taza un momento inolvidable.
+📩 Escríbeno
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02xgJVKU1JvW8Vq3pYykdf9Dn3LdgWPx8ghHNrNhNc2S3kn9sbRzc4T9NNGFwSWkLdl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-bos5-1.xx.fbcdn.net/v/t51.82787-15/636920282_18527522263065600_6511036786589640916_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=x5gJ5hjipggQ7kNvwFl82L4&_nc_oc=Adm528Gl8TeMIAtq8dgnkvagDON790HSrCAvYWaUk_utqDcNl6-pyOWSVSGlUyc0q7L-RIfDQ3vFBtzz3HyzNXJA&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=2_w5lLrzeA8on-hOq8v-pg&_nc_ss=8&oh=00_AftoRUPyuUtF63fgq-P6W__n-VyZgK_J7qEfDKAg4Q5J7g&oe=69A84B0F" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">20 Feb 2026</div>
+                    <div class="blog-text">☕✨ Una taza de café ya no es solo una bebida…
+Es una reunión pendiente.
+Es una cita especial.
+Es un espacio para cerrar un trato.
+Es el momento perfecto para desconectarte del ruido y reconectar contigo.
+
+En la terraza de Hotel La Palma, el café se disfruta diferente: rodeado de naturaleza, aire fresco y el encanto de nuestras artesanías 🌳🤎
+
+Aquí no solo vienes a tomar café… vienes a vivir la experiencia.
+
+📲 Reserva tu mesa en nuestra terraza y haz de tu próxima taza un momento inolvidable.
+📩 Escríbeno
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid06Kv6ePBGfU8XipgAJpP2NPB6UPYLcnThWUny1QZCKAxWmW3sGdNHcWCx3Yu5Btn1l" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid0eeWQVBCk8EVNwZ1CSfyCYBuaBNFKFFQEfKcET8DQ6vumdLHQhDGrW9icHanv4jMZl" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">20 Feb 2026</div>
+                    <div class="blog-text">Te compartimos lo creado por nuestros aprendices de cerámica 🥰
+Nos encantan cuando se emocionan por el resultado de su pieza, ¿a ti también te gustaría hacer una?
+
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0eeWQVBCk8EVNwZ1CSfyCYBuaBNFKFFQEfKcET8DQ6vumdLHQhDGrW9icHanv4jMZl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-bos5-1.xx.fbcdn.net/v/t51.82787-15/636868801_18526228753065600_975151099287754465_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_ohc=u2tYRWXQI3AQ7kNvwEdW0qP&_nc_oc=AdkL0HsBcyy74oe8xPj-mcO0Al0lZhR2zQbssSj3K2BYeG156p8WpV7xzCWaUfUn2mB47vG0BMo0rkf6j2XjH1bQ&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=2_w5lLrzeA8on-hOq8v-pg&_nc_ss=8&oh=00_AfvzrXWM4F2lcvPW-IpB6BlBK_K-gEX-r84fZLzqB3qr1A&oe=69A855F8" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">18 Feb 2026</div>
+                    <div class="blog-text">En Hotel La Palma amamos la naturaleza 🥰 y cada vez que nos visitas, nos encanta compartir contigo nuestro jardín lleno de colores, vida y sobre todo, tranquilidad 
+Vive experiencia en la Ruta Fresca ⛰️
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02Jmo1Wo5PkczwhK54i7U64r2zVH9GewVKCiNyKQ9VHVk5Lw832fuZ6epfJNScm3eCl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid0rYP3p3RwfQ5ZgF85vh4SzBpLKgCrXkFX5yvQy6JRXggghYVMq6HHr3cuPdh4Gbnl" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">16 Feb 2026</div>
+                    <div class="blog-text">Vive experiencia en la Ruta Fresca ⛰️
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0rYP3p3RwfQ5ZgF85vh4SzBpLKgCrXkFX5yvQy6JRXggghYVMq6HHr3cuPdh4Gbnl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent.fagc1-2.fna.fbcdn.net/v/t51.82787-15/636691937_18524529556065600_2014478418496833256_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=NzRqJycD0FAQ7kNvwGIBstg&_nc_oc=AdlbS80P64WJxsH59vwoJPoEqy9KtEVvafnzradxE7Vj5OXFL1Yy_Tsuuj9-dFRz8Kg&_nc_zt=23&_nc_ht=scontent.fagc1-2.fna&_nc_gid=vnL3i8igOGC06vk3TIcSUw&_nc_ss=8&oh=00_AfuO2peGVDG-BUuA4zSv73E0vI1Tem5A-cOdEy5QjliQiw&oe=69A84473" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">14 Feb 2026</div>
+                    <div class="blog-text">🍓Ahora ya no se regalan chocolates… se regalan fresas.
+
+Porque la amistad también se celebra.
+Porque las risas compartidas merecen detalles especiales.
+Porque las mejores historias empiezan con un “esto es para ti”.
+
+Este Día de la Amistad sorprende con algo diferente, fresco y lleno de cariño.
+
+En Hotel La Palma celebramos los lazos que se eligen 🤍🍓
+Fresas 100% orgánicas 
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02MY7a35PSm38spia39wJJfYzDNi1S5zb1c8tA1JsFJaK2sepnzVD5H7wpWptSspvzl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid0v17fphRj8zgYoQCTxjoJKqDi7NzeUJhL1zVxFpZVLZuxkxdmGosr938HG1J1GE9Xl" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">13 Feb 2026</div>
+                    <div class="blog-text">El Hotel mas antiguo de El Salvador te espera con un espacio lleno de tranquilidad 😌
+
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0v17fphRj8zgYoQCTxjoJKqDi7NzeUJhL1zVxFpZVLZuxkxdmGosr938HG1J1GE9Xl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid0RtpwKGk6SQw9Eiurupyee85j5i5mkkhBV1jabW6R6Di5mtvKtL6ZbLCKNnQPJAedl" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">13 Feb 2026</div>
+                    <div class="blog-text">🌿 ¿Te imaginas escaparte un día y crear algo con tus propias manos?
+
+En Hotel La Palma no solo vienes a dormir…
+vienes a desconectarte y vivir una experiencia diferente.
+
+✨ Tu escapada incluye:
+💚 Desayuno típico palmeño con café de la zona
+🏊 Piscina rodeada de bosque
+🌳 Zonas verdes con hamacas para descansar
+🎨 Clase de cerámica donde creas tu propia pieza de barro
+💰 Tarifas por noche:
+• 2 personas – $70
+• 3 personas – $90
+• 4 personas – $120
+• 5 personas – $135
+
+Un espacio perfecto para venir en pareja, con amigos o familia a celebrar algo especial o simplemente respirar profundo.
+
+📍 La Palma, Chalatenango (a 2 horas de San Salvador)
+Escribe DESCANSO por WhatsApp 7010-0373
+y te enviamos disponibilidad.
+
+#HotelLaPalma #LaPalmaChalatenango #TurismoElSalvador #DescubreElSalvador #EscapadaEnLaMontaña #EscapadaRomantica #ViajesElSalvador #PlanEnElSalvador #CeramicaElSalvador #ExperienciasCreativas #ArteEnBarro #ViajeEnPareja #ParejasElSalvador #Chalatenango #LaPalmaSV</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0RtpwKGk6SQw9Eiurupyee85j5i5mkkhBV1jabW6R6Di5mtvKtL6ZbLCKNnQPJAedl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid02Mh4yRhGxtHZe4cQvxnJTCvB2Uan3z1Pzcd8EZ3Cm7ST6BnmWWgA6cQS1BmeQueLol" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">13 Feb 2026</div>
+                    <div class="blog-text">🌿✨ Vive un sabor que te conecta con la naturaleza en La Palma, Chalatenango✨🌿
+Regálate un momento único en nuestro restaurante en Hotel La Palma 🍃.
+Platos preparados con ingredientes frescos y cultivados en nuestro huerto. 😋
+Nuestro horario es de 7:00 a.m. a 9:00 p.m.
+La especialidad de la casa:
+🥩 Tacos de pato
+🍲 Sopas reconfortantes
+☕ Postres y café que enamoran
+🥩 Carnes blancas y rojas.
+
+📲 Escribe ya por WhatsApp y asegura tu mesa: +503 7010-0373
+
+💡 Tip: Ven con familia, amigos o tu persona favorita… los recuerdos saben mejor en buena compañía.
+Además, por consumo de $10 por persona puedes hacer una pieza de barro en nuestro taller y llevártela contigo.
+
+#hotellapalmasv #elsalvadortravel #lapalma #hermanoslejanos</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02Mh4yRhGxtHZe4cQvxnJTCvB2Uan3z1Pzcd8EZ3Cm7ST6BnmWWgA6cQS1BmeQueLol" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-det1-1.xx.fbcdn.net/v/t51.82787-15/628545317_18524105437065600_2596779681991462464_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=gxZotF9sXVkQ7kNvwHTjUt7&_nc_oc=Adkpd8U3xLqpFp--8eVRumD7DzDqcBOQ2tNF3g6J5cd3FUlNHwPEzyfI6Ny3HGHxrZSDNZMnuRVQZQUOJ_1Vrqlx&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=rI6oYOVjZ57wbsCGN-HfoQ&_nc_ss=8&oh=00_AfsAf6iW51sZlcy1LAB9rE7vviS8dh06waswxuz5fl4tDQ&oe=69A87AE4" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">12 Feb 2026</div>
+                    <div class="blog-text">📦 Paquete escapa entre amigas ✨
+Un almuerzo rico y disfrutar del fresco clima de la montaña es lo que necesitas ☺️🍷🍽️
+
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0XcptUcn4XJZADf8LFMQy6dfVhBqyKnBfeGsLPojUYNNixXFxqjke1B9MQHixF7h5l" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lga3-3.xx.fbcdn.net/v/t51.71878-10/631366217_1184597303465685_5694526976515663970_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=YHqnTEdF6hgQ7kNvwFKKoxp&_nc_oc=AdnsYq5Vfy-ZPXjqlMei9EiU16eCHVo034ak07Gw-I-caxOgPnWGCA0z8J5BIgcWM84&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=Y722iBfgmCcnOUSv5kriDA&_nc_ss=8&oh=00_AfuMxCaNTRhMfCXv5Zo9Jxk9wR7sX5EfW6wHcE4FGnkVWA&oe=69A84F56" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">11 Feb 2026</div>
+                    <div class="blog-text">¿Pensando un plan para este fin de semana?
+Escríbenos PLAN y te enviaremos información de nuestros talleres para tu visita del día 🫶🏻😊
+
+#hotellapalmasv #chalatenango #elsalvador #hermanoslejanos</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/2079427029547630/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t51.71878-10/628953754_5280120178879108_751550162624302333_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=EYObVzPiM2MQ7kNvwHxY0Vk&_nc_oc=AdmQsLqL78ZTWYvKBLDLzYnfYoG-M8kMAFrsVw-E4c2DZtBhUz0ulaI6gZNn2-imhFQ&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=Y722iBfgmCcnOUSv5kriDA&_nc_ss=8&oh=00_AftURcpI31gog2BradIUX0o5q5KZX9K9pfioQm1n5Qa9JQ&oe=69A854B6" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">10 Feb 2026</div>
+                    <div class="blog-text">👐 Clase de cerámica en la montaña
+barro, calma y creatividad
+
+Ideal para
+• Desconectar del estrés 🌬️
+• Vivir algo diferente 🥰
+
+Escríbenos “CERÁMICA” y te enviamos información 
+
+#hotellapalmasv #chalatenango #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/1431425592007682/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/630832513_1308434644650641_8936021209307202899_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=5sBKnrV67WcQ7kNvwGt4DRa&_nc_oc=AdmMuyyecAtk0MySW9WTc-mDScCn98vTjHl9czz_jTv9uQ4MLj86YuG0AwV6BmjtT8s&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=Y722iBfgmCcnOUSv5kriDA&_nc_ss=8&oh=00_AfsBy1m5GPZlpTGEpUwvGzB7_wvdQfAch2bGnRIT-wxyXg&oe=69A8701F" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">10 Feb 2026</div>
+                    <div class="blog-text">No todo el descanso es en fin de semana…
+a veces el mejor es una escapada, en un martes 🌿
+
+Paquete Escapada creativa entre semana
+Incluye:
+• Habitación doble
+• Desayuno típico con café de altura 
+• Clase de cerámica para 2
+• Foto en el jarrón más grande de Centroamérica
+
+Escríbenos “DESCANSO” por WhatsApp y te enviamos tarifas con disponibilidad
+
+ #hermanoslejanos #elsalvadortravel #hotellapalmasv #shakiraenelsalvador #residenciacentroamericana #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02eCJ99KAftMKstVCKoyzRrD4BoB63Hsqa8PRfoxNQ1csQqaM5qEse9BxPPD9DZEe3l" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/631481484_1308424704651635_3619081396805827838_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=v3M4PAoIOgkQ7kNvwHk1PKH&_nc_oc=AdnEL8pZKIh2rm3qc9GevseEKDr5lKoHWCwj3C1euU4jF39J1_D9lDVzYCVKmY9Wwg4&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=etw0KQLfoOtxe_Z0UHoJuA&_nc_ss=8&oh=00_AfsKYx9SdzFnnm2Jerns2RNMafuCHz9OU019AuE_h117Fg&oe=69A84C83" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">10 Feb 2026</div>
+                    <div class="blog-text">Caminando con la loba entre naturaleza y frío ❄️🌿
+Frío, calma y naturaleza en La Palma.
+
+📲 Reserva ahora al +503 7010-0373
+
+#hotellapalmasv #elsalvadortravel #residenciacentroamericana #shakiraenelsalvador #hermanoslejanos</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0HJwP7Jua14hjCevSTmPFYH9bkrGmRREgQvcCWNKnXrFrvAV9tDPbMk5mWdPzMDVdl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/631354456_1306050574889048_7137954900860040786_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=WuEJBvesGtEQ7kNvwHb53Ml&_nc_oc=AdmPMKLcZq8l6cs0uisNq6UWWEDp6U4bw1SFKz8Ym3FhMcyw3ET4AnDQmxGDD0gf_ew&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=etw0KQLfoOtxe_Z0UHoJuA&_nc_ss=8&oh=00_AfvWsa4DvvDxeS1tcSPs1rzcC0scao2-OzWID0loH43_Wg&oe=69A85251" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">08 Feb 2026</div>
+                    <div class="blog-text">Lo simple, cuando es bien hecho, se vuelve especial.
+¡Prueba nuestra Mermelada de Limón!
+
+📩 Escríbenos y vive la experiencia Hotel La Palma.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0DediwKhhFZXcnQ5ws8AMFzXmhZ66wEPa5c7MJrhCQeqcC1vbg7n6aPtLBKTt7pgxl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid0sE971Cb2ZhGqfPx5M1J2S6CB97RujfR4Y7brNj2MiAKes8ffGV6TbMMzRVX3caGjl" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">08 Feb 2026</div>
+                    <div class="blog-text">¡La Palma esta de fiesta! 🎉
+En esta época de fio vente a vivir las fiestas patronales de La Palma 😉
+Reserva al +503 7010-0373
+#elsalvadortravel  #elsalvadoresmágico #fiestaspatronales</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0sE971Cb2ZhGqfPx5M1J2S6CB97RujfR4Y7brNj2MiAKes8ffGV6TbMMzRVX3caGjl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/629372577_1304934848333954_6139359901221541089_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=zMGjF04zUwgQ7kNvwHsBXEw&_nc_oc=Adnjsl1gfQPnyxOJ9nKTPVWfLsOhJplJmt4Y-ilIRb96lD0l93JRGv_jC72LHQebuE0&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=BwldGPQmm_-ThBv6mUluJw&_nc_ss=8&oh=00_AfuFrIchRu9sPu6Uc7olY0isdFREsZDvE7bBMKDZGu7BMg&oe=69A878EC" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">06 Feb 2026</div>
+                    <div class="blog-text">Buscaba frío…
+encontró buen clima…
+y decidió quedarse 🐻‍❄️💙
+Así se vive el ambiente en Hotel La Palma.
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid04PKYyS3dWogSuC1iB7J2yibiy86MsETKarzHY13yermw5gEoWiRo6HL7yzZRc9k3l" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/629413297_1304363818391057_3604218020459954190_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=105&ccb=1-7&_nc_sid=13d280&_nc_ohc=XxSx6v-OHrMQ7kNvwGggmes&_nc_oc=AdkTeD6WUgRQDSszbxMU222uYqdfI-csnhdGwCVo_cd-TWllf5HWEeBPIDxCwalfNQI&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=BwldGPQmm_-ThBv6mUluJw&_nc_ss=8&oh=00_AfsSeAJSNmtOlcUp62mnTbCYfj0tJLWV7dgF3wAiXxtgyg&oe=69A8438D" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">06 Feb 2026</div>
+                    <div class="blog-text">Aquí la tranquilidad no se busca, se siente.
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0ZY7Q7uDJh9T635CuQmnTt5wZnD5bzoXndSa18MEtomV75nUPAfJ5M7igsmYpdevrl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/626890471_1300875745406531_8714041807858710302_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=5l7jx0QBXRgQ7kNvwF_40ZU&_nc_oc=Adljo45t23w-KFlg4xZbfqydJ_AgTKvO8RdtupJ2HJJGuZI_jN7Fkwt2UslvfUOvuqM&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=BwldGPQmm_-ThBv6mUluJw&_nc_ss=8&oh=00_Afu5j5JxZT152XxU-oPa1nMamJPdIEAmqFt_0V0EyjN5Wg&oe=69A857FF" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">04 Feb 2026</div>
+                    <div class="blog-text">Entre árboles, silencio y aire fresco se esconde nuestra cabaña suiza: un rincón pensado para desconectarte del ruido y reconectar contigo.
+Madera, calidez y naturaleza se unen para regalarte una estadía tranquila, íntima y llena de encanto. 🌲✨
+
+Ideal para descansar, leer, conversar sin prisas y despertar con el sonido del bosque.
+📩 Escríbenos y vive la experiencia.
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0agwvPw7NrRHEaHvSMRSzeTxr3K18RzkBCja8A3NwHM3kxSqN7MAwLpcGdJfR9SdLl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/627039303_1300874118740027_5561074676791884201_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=x3oT-hkSxeoQ7kNvwFvOTkB&_nc_oc=Adl7CWE9WhaXfW46BBDnFTHyheFp0tz-dasstAkRKleFBTG7vNo1tar__ucMwj9ZejE&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=s5Dl2HWdA1m9_xlmBRn8CA&_nc_ss=8&oh=00_AfuqwxpDiC0eunti7OyAL5xNATUfs5EaSF-7FvFRhvp3Xw&oe=69A87160" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">03 Feb 2026</div>
+                    <div class="blog-text">Ellos llegaron buscando refugio… y se quedaron como parte de la familia.
+Hoy estos 4 gatitos rescatados son parte de nuestro día a día, cuidan el lugar, nos acompañan y llenan de vida cada rincón. 🐱🌿
+¿Sabes cómo se llaman? 😺
+Te leemos en los comentarios 👇💬
+
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02TDVUaKfiiuDoFJ7hpxehcU2BKjkzbmyeV2ANfy5LS87RMEM1K3ksabqRrekLsJcol" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/626844862_1300872568740182_9148791092685164925_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_ohc=CpA50QA0qoEQ7kNvwEyNkTd&_nc_oc=AdnsnuxfEbMwv1U9t7oTgqHGIbKvBNBrDxL_6ltZtjsJlySd1M6BtolXYhRgzb5Pm2A&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=s5Dl2HWdA1m9_xlmBRn8CA&_nc_ss=8&oh=00_AftKSPZemZfBUM8oUtR7FojBzzkmoYm6zSi6vp8SgLJv6Q&oe=69A86A71" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">02 Feb 2026</div>
+                    <div class="blog-text">Cada pieza que elaboramos nace del barro, del color y de las manos que aman este oficio. No son solo artesanías: son recuerdos que viajan contigo, fragmentos de La Palma que conservan momentos, emociones y tradición.
+Llévate una pieza única, hecha para durar y para contar una historia cada vez que la mires. 🤍🎨🌿
+📞 Escribenos al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02VXpXRbzWcmkjDHnKpdP5AKdrbf76DSeLwU3yfvGw7ag71bs1JN43LK1rmBn23JSql" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/626667756_1300870725407033_3374917821487597495_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_ohc=vG-e31mJpzMQ7kNvwFMBxR9&_nc_oc=AdkpbzHmjvIVtEcCdrsc6tkEGYMTHmuIssCc4X1JWyuYl9hixdHQ7JpRIt7s3Nc96Wg&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=s5Dl2HWdA1m9_xlmBRn8CA&_nc_ss=8&oh=00_AfvRrlRVZ2GAx3ofiySkZerjeyEtfmnZJtIQ7k5tzXaMKg&oe=69A862D0" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">01 Feb 2026</div>
+                    <div class="blog-text">Explora La Palma
+Viajar en grupo es descubrir más, reír más y conectar mejor.
+En Hotel La Palma diseñamos tours para grupos que buscan naturaleza, cultura y experiencias auténticas: caminatas entre montañas, café de altura, artesanías, historia viva y momentos que se quedan para siempre.
+
+Ideal para familias, amigos, empresas y viajeros que quieren conocer La Palma de una forma cercana, organizada y memorable.
+📩 Escríbenos  al +503 7010 - 0373  y armamos tu experiencia a la medida.
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0eQrcCcDpExH19HsuMNbiCr1hsdbjnYfNnNguScsR7fYTatyuH1KYx1PWqzfvTEgJl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent.fsvd1-1.fna.fbcdn.net/v/t39.30808-6/626392593_1300153415478764_382778170926410136_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=X8g__Dym4KQQ7kNvwE4CbRO&_nc_oc=AdnYfNsAQD3XrBjfBj7Pgwsk8nNu1DgFPTn1w_6gPBATtnFO9pHMj410y2F6TRyz8QY&_nc_zt=23&_nc_ht=scontent.fsvd1-1.fna&_nc_gid=gLhCWLrTcEKGuiOZpME_hA&_nc_ss=8&oh=00_AftmH0nJRyiXbTXu_hdvqPn_HmOogXRymPTS7jilt9yoJg&oe=69A85E57" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">31 Jan 2026</div>
+                    <div class="blog-text">Pay de temporada: el sabor que vuelve cuando la naturaleza manda
+Nuestros pays de temporada nacen del ritmo del campo y del cariño en cada receta.
+Frutas frescas, sabores auténticos y ese toque casero que solo se disfruta cuando es su momento perfecto.
+Porque lo natural no se fuerza… se espera y se saborea. 🤍🥧
+📞 Restaurante al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0jZ7Ge6QKckpohUYhzeM7bRtVNrVRmeiHJhaHB3hWDWeEQVUbidZivVDtzhicD6Nil" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent.fsvd1-1.fna.fbcdn.net/v/t39.30808-6/623107094_1297676115726494_1113755076467938995_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=-VARiv-a4W8Q7kNvwEI7gWH&_nc_oc=AdnPjgLwgCr1cOotUWzjV49cQVakMc3ccj4X-OEvHIPipZNuleBCRuz0EwCPEv2wPRI&_nc_zt=23&_nc_ht=scontent.fsvd1-1.fna&_nc_gid=gLhCWLrTcEKGuiOZpME_hA&_nc_ss=8&oh=00_AfuxAuvlg2gXmmVTg5_QChGrnty2xPlegPN5w_Mc2-QR3w&oe=69A85363" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">29 Jan 2026</div>
+                    <div class="blog-text">Fundado en 1945: parte de la historia viva de La Palma
+Aquí funcionó, años atrás, el primer hotel de la zona, fundado por un italiano que trajo consigo una visión de hospitalidad en medio de la montaña y dio inicio al turismo en el municipio.
+
+Hoy, este lugar se conserva como un punto histórico y fotográfico, un recordatorio del pasado y de las primeras historias de viajeros que llegaron a La Palma.
+
+📸 No olvides pasar y tomarte una foto, llevarte el recuerdo y conectar con uno de los espacios que marcaron el comienzo de todo.
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0xFQMWUprgiAYATvbTSa6aiShdbtgu1WL43HkuAu3ij5guKDv2mi2T6r44gQpmb7ql" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent.fsvd1-1.fna.fbcdn.net/v/t39.30808-6/622915486_1296613772499395_3960471454433345761_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=8U9t1cYEOCoQ7kNvwE2i9zw&_nc_oc=AdlvKazGEkoT068eSfWfE58L853L1GkFo_XV5MjH29G-0i5xWNVI5EhTMfYmLMfDLsc&_nc_zt=23&_nc_ht=scontent.fsvd1-1.fna&_nc_gid=gLhCWLrTcEKGuiOZpME_hA&_nc_ss=8&oh=00_AftFJgLAE9kk4peJ1IqG0iT-Mox9fu0q2bgiYcwMPlIeVQ&oe=69A84E0D" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">27 Jan 2026</div>
+                    <div class="blog-text">Febrero es perfecto para bajar el ritmo y regalarse descanso.
+Nuestra cabaña suiza te espera entre naturaleza, silencio y comodidad, ideal para desconectarte y disfrutar con calma.
+Reserva con anticipación y vive una experiencia acogedora en la montaña 🌿🏡
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02nwgkDg2VFS1H1GREMBSF653dNnWoXrM3NKQYe7ebcjMW35M8jHqvgY1Yns8JKV1bl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/623248534_1296542075839898_6722735175459551229_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=jfxI8D0gLeIQ7kNvwEeRjaV&_nc_oc=AdnvO5K9kjo7MtN8YWp2lqIx6Cs-3vmP75dDemM0m4wuq7PWu1dTMytvhX6RVKM2mSQ&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=htL_IPbcgtpAllsxFq3WYQ&_nc_ss=8&oh=00_AfuY2rysAw8BGin1qYV3H1OU9Hp4Xr5VLX_Hn33g45R_cQ&oe=69A8475A" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">27 Jan 2026</div>
+                    <div class="blog-text">Nuestra hamburguesa artesanal 🍔
+¿Sabías que el pan lo elaboramos en nuestra propia cocina?
+Cada hamburguesa se prepara con ingredientes frescos que traemos directamente de la montaña y se acompaña con papas de la zona alta.
+Un sabor auténtico, casero y simplemente delicioso 🌿
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid032H19HzwismiYiiUxnj3bG7CiitkwZzmAKLDoQLYVy42CND88sPj2vUxZd2dWJFN8l" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="2022-07-13.webp" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">27 Jan 2026</div>
+                    <div class="blog-text"></div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0T9EXYsmmni5XP9ebJ5B9NuiTDLJ7EZ65QcmsqfzdMa73nha1j6eWAYsWf1CzzPgNl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/621801501_1294823692678403_4202208206895203783_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=Lot9hFRVFUsQ7kNvwHwR5_X&_nc_oc=AdkrRVmfdn0rvWOY920hE0alXEcU_GKZHeYZHEynmlkiBmkQyVeq8N5NkJF63nXBcH8&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=htL_IPbcgtpAllsxFq3WYQ&_nc_ss=8&oh=00_AfskC93cQk8hOFvoTr4KwsPxAAsvkNYlBqcEIQi5h_TvEQ&oe=69A852B1" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">25 Jan 2026</div>
+                    <div class="blog-text">¡Hechos a mano, pensados para tu piel!
+Contamos con dos jabones artesanales: aloe vera y miel, ambos elaborados a mano y enriquecidos con aceite de coco. Ingredientes naturales que hidratan, suavizan y cuidan tu piel, en una experiencia consciente que respeta el entorno y celebra los pequeños detalles de tu estancia. 🧼🍯🌿
+📚 Disponible en Hotel La Palma
+💛 Adquiérelo y conserva un pedacito de nuestra memoria
+💬 Consultá por ellos en restaurante
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid027vCQDBPZs4pZeiUXp7Y4HRuQ73aw3mychKpFxzat69ENXToXYxgAfxvNFYF7TXsCl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/621798702_1293296142831158_1699324296713997962_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=BvtDNpUtIfUQ7kNvwH0DOF0&_nc_oc=AdmtnXWkObsIwzTEh7vSKUpBfm91PCJoMk-pXRfp9PHLBXME0D9jnf6WJoeCxlHEzCqcKQH8qt2CJr2UtdQt3SLt&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=USTwT0CDpPYMsHBlT2Xq6Q&_nc_ss=8&oh=00_Afuwzcz3-x9NelIABrBv6tE658fGz17tXl6XN8Sq3R9FNg&oe=69A878C3" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">23 Jan 2026</div>
+                    <div class="blog-text">Hotel La Palma en tiempos de guerra
+Un libro que guarda memoria, historias reales y momentos que marcaron a nuestra comunidad.
+Entre montañas, silencios y esperanza, este lugar fue refugio y testigo de una época que no debe olvidarse.
+Hoy puedes llevarte este relato a casa y ser parte de la historia.
+
+📚 Disponible en Hotel La Palma
+💛 Adquiérelo y conserva un pedacito de nuestra memoria
+💬 Consultá por ellos en restaurante
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0Tnh8RA1NNyLFY8LRwMHJ9H87mJD2wwKu5XmGV6FXJyqihdexn14r4Cw8ZZ4krtkyl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/617582107_1291528273007945_8286017505864550232_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=BXSzkh247CkQ7kNvwGeCTbi&_nc_oc=AdlCxEM6fml7dUoo3Xd2Qku0aYooqZ1S0MFukUKax5lKObpgaUF8p070XOnpX7cqm5fbwdOdPYUHW9G3zgRz4Dlt&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=USTwT0CDpPYMsHBlT2Xq6Q&_nc_ss=8&oh=00_AfvNG9IzMkWQ2iZoXFxrDM7T8LizEE2GE9s843guVIpSBQ&oe=69A86B97" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">21 Jan 2026</div>
+                    <div class="blog-text">Un detalle sencillo, hecho con alma. ✨
+Nuestros imanes de barro están hechos y pintados a mano, pieza por pieza, convirtiéndose en un recuerdo auténtico de La Palma.
+Ideales para regalar, coleccionar o llevarte un pedacito de nuestra historia a casa 💛
+
+📍Disponibles en Hotel La Palma
+💬 Consultá por ellos en restaurante
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02gwk43D5dJc11SzBro52xxsajSvgXPhK3TkS41zqMikqB2kEj1E9FPz14C5f67jdAl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/617534833_1290731693087603_4917107376643226951_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_ohc=I06sfmGY4sQQ7kNvwG8Sdkb&_nc_oc=Adm884PVPE3fqa2LWB8hYp9EakVr0bfsLhgfj2aH9v_I9-LJ0ZbYhZ2-2OM965gpOFbQF3si5XWX9RrHuaGUWv7h&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=USTwT0CDpPYMsHBlT2Xq6Q&_nc_ss=8&oh=00_AfsmMERA2E5fqAAHAyN6og0cQSDbXJXHSszzky1UHl_BXQ&oe=69A86A54" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">20 Jan 2026</div>
+                    <div class="blog-text">Colores, pinceles y barro que cobran vida ✨
+
+Vive la experiencia de nuestro taller de pintura en barro bizcochado, donde cada trazo forma parte de tu propia creación.
+La pieza pintada es de uso decorativo (no utilitaria) y te la llevas como recuerdo de la experiencia.
+
+🎨 Ideal para familias, amigos y viajeros que buscan una actividad creativa y relajante.
+📍 Hotel La Palma, La Palma, Chalatenango
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #tallercreativo #turismocreativo</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02MojPDHxKMcaYDSejAuyw99ibv14j5XrEZF8Rb9fCKE2wZa6bW9qrTic62vHbe7Uwl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/616186789_1289336579893781_7860036986045532747_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_ohc=LlTGcWqFD_YQ7kNvwEKfttk&_nc_oc=Adm9a4XUDmiFIpWVoNwJaeJHNI2T0tqirJ3hNWjKgU85h0FiRMluXQsb1sMgtwQuhxU&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=IjuxVVClf0SfJeXOFp6hzg&_nc_ss=8&oh=00_Afud53mUdrq8IkFsi-ffzyhTTe_eCLxLdBIiKip-KGlUvA&oe=69A85909" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">18 Jan 2026</div>
+                    <div class="blog-text">Leer comentarios como este nos recuerda por qué hacemos lo que hacemos 🤍
+Gracias por elegir Hotel La Palma y por vivir la experiencia con nosotros.
+Aquí siempre habrá un espacio para desconectarse, crear recuerdos y volver cuando el alma lo necesite 🌿🏡
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0YBhTGPK87xSQ47pABiN7M4xQ4MTRRZRqv3feBARWmMiZcf6Z5UojCWbWUQ211nMKl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-iad3-2.xx.fbcdn.net/v/t51.71878-10/615882198_1406859334365253_2475784609146400172_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=fQPeDfTuZdMQ7kNvwHuJsEJ&_nc_oc=AdnwecYx33Px7VNTpH7FSeQZyXaOzzjqYlq8P5oLDa1TZ9oNI7TVFJCnvOnZTH4u8YY&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=IjuxVVClf0SfJeXOFp6hzg&_nc_ss=8&oh=00_AftiKgu2z9VfFmtroSumG85c_rw9CRLtvYtZyuZAWaFLxQ&oe=69A85358" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">16 Jan 2026</div>
+                    <div class="blog-text">✨ Higos en almíbar de la montaña ⛰️ 
+Ya disponibles nuevamente en Hotel La Palma ✅
+La montaña nos bendice con sus frutos, y nosotros los compartimos contigo 🤍🌿
+#hermanoslejanos #elsalvador #ceramica #hotellapalmasv #higos</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/1329734958986776/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/616384188_1287645153396257_7719632549729354154_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=OTjBgk5ArpQQ7kNvwElPFiN&_nc_oc=AdlUmtacH-6l0wtq0u9Fw0umGlQW_7nIiKLp_B3Mq7Asl-MevARPzBqpi5xWUfrDBTA&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=IjuxVVClf0SfJeXOFp6hzg&_nc_ss=8&oh=00_Aft00Cz8ysxsQnkiKkJckDDrNfDiePu7EP3X69TKNdC_bg&oe=69A84702" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">16 Jan 2026</div>
+                    <div class="blog-text">Porque el amor también se vive en los detalles ✨
+Sorprende a esa persona especial con una habitación decorada para San Valentín y convierte su estadía en un recuerdo inolvidable 💖🌹
+En Hotel La Palma nos encargamos de crear el ambiente perfecto para celebrar el amor.
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0p7wfwZdnuxXfzdj7KhmmdSmwVrQsweeGHG4zi2puNSr6LaAviQjZyKp1vYoLHT6il" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t51.71878-10/615408514_2292339404594162_8795032831628933859_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=xgdAaCcqC_AQ7kNvwE3UPeY&_nc_oc=Adk0GFMBWxoH0ZDS-uoBoAaxiowFjEywI7Yj7-bwJLZwLLFYhsrk7XXMPVQd0a0WM7U&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=E7IuWHF0BiPhn3zLUepqhw&_nc_ss=8&oh=00_AfuD91CuJhIdYRpvbCjpZErD6Ka7o7fcxgAyfWFt4C-oxg&oe=69A84BCF" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">15 Jan 2026</div>
+                    <div class="blog-text">¡La solución que necesitas está aquí! 
+Que rico es tomar café ☕️❤️ y más en Hotel La Palma 
+
+#wellnesselsalvador #fypシ #elsalvadortravel #hermanoslejanos</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/799994109166003/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/615506122_1287038280123611_6997954275268035586_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=88yk8vYhk-oQ7kNvwFjEvBJ&_nc_oc=AdkQbY4MLSM_afmk5EYAFpbY2pfwru52ps7u9w6JPhb_dRrOUeT6_8PyZD8HT0CpbZs&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=E7IuWHF0BiPhn3zLUepqhw&_nc_ss=8&oh=00_AfucJMGDhwhWeQILaJcIcclNaaM6hG6TGzBxNp2Ojp1QYQ&oe=69A8565C" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">15 Jan 2026</div>
+                    <div class="blog-text">Ven a vivir la experiencia de crear en barro, rodeado de naturaleza, calma y creatividad.
+En Hotel La Palma, desconectar también se siente así.
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02RHfGanpW5CCWvBZrDTZMk1zkkC4i6Q7csCQNGQmaMhYG1jqxisCtJRoYkBGjN33Jl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t51.71878-10/615584091_2418873071864757_6371197246023503291_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=Co6uM1hc2y0Q7kNvwEmFw70&_nc_oc=Admp9_gat8JLnJVxQJqFVHSog59aZ6HUwNENSFbFzsFV9wc1H8fAlxEIccG8GsoKfuM&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=E7IuWHF0BiPhn3zLUepqhw&_nc_ss=8&oh=00_AfttkJtkyhC4XZkR75vIJ-5oDz9tuVTIqcVJFH0aFFI73A&oe=69A86F29" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">14 Jan 2026</div>
+                    <div class="blog-text">¿Buscas la escapada perfecta para estos meses?
+La cabaña suiza en medio del bosque es tu opción 💘
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/900464892495141/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t51.82787-15/616568989_18517240024065600_4607024154207052912_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=8f7y9fK75JwQ7kNvwHgz8uu&_nc_oc=AdkQHRWRvB8jMBO0eS5R_uCWAggLfKHL4VWmZv_3ZeTsYuxCfHuUbmu-P9N2-FWFxLA&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=s3tL_9IGBKZR0rcicbLypw&_nc_ss=8&oh=00_AftGQoNhF64Zo100cQ4M5FFQENEGi-SK42qFwcBbE5TU1A&oe=69A86D6C" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">13 Jan 2026</div>
+                    <div class="blog-text">BARROTERAPIA 🌿
+Crear con barro en medio de la naturaleza es una pausa para el alma.
+Tus manos se conectan con la tierra, la mente se libera y el tiempo se detiene.
+No se trata solo de hacer una pieza, sino de vivir una experiencia donde crear es la mejor forma de desconectarte.
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0XC9LXaZtsb4bBVEgWikGdCuF89V1UfzHjPVHgNCF1cvQkYMjp3BuL2qtoVCD5g1al" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t51.82787-15/612481571_18516857716065600_8849556232046614904_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=hZqtVCZqSaYQ7kNvwGHysIM&_nc_oc=Adnu2MI0xsjb_EiXTgsXRUaVlkQJrqClRS-vOHsAfG0UAqBdr58a-pYu5AwnaFw5D2U&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=s3tL_9IGBKZR0rcicbLypw&_nc_ss=8&oh=00_AfsNcpCy6qiPAP0kWg6CRCFzKMajHlEPskJ5UAG2z8TqUQ&oe=69A86D19" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">10 Jan 2026</div>
+                    <div class="blog-text">Una cita diferente: cerámica y amor.
+Manos que se encuentran y una pieza creada juntos. 🤍
+Al alojarte con nosotros, esta experiencia está incluida.
+Y si nos visitas en pareja, al consumir $10 por persona pueden crear su pieza de barro en nuestro taller.
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0JdVeTNyanmsCdAVLm7WZxkg7AaAp8HpDXGy4aUe76d3wfEkGHn7vpHHSu5PBvq9al" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t51.71878-10/612241318_1419609489785524_4613140046922677478_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=SeoT7tewq4cQ7kNvwFJtDt4&_nc_oc=AdkySBWop0Q_ZD-4_PphncMxiHJzDsVrtfznhJscHBDetdt_Tls4w9_q_Ccvb7CpTF4&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=s3tL_9IGBKZR0rcicbLypw&_nc_ss=8&oh=00_AfsTyssXBqreBpdrd5XCK7lfIZ5SWgvXNH4-iFHHhR182g&oe=69A8585C" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">10 Jan 2026</div>
+                    <div class="blog-text">¡Lo nuevo en el hotel!
+Clase de pintura en piezas bizcochadas y de uso decorativo 🎨, una actividad que busca que te relajes y conectes contigo 😌
+ℹ️ Las tarifas de la pieza varía según el estilo, consúltanos y agenda tu día de taller de pintura 
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #montana #lapalma</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/869184892406669/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://www.facebook.com/hotellapalma/posts/pfbid022itP425NVTg3h774nqwZH984fnwmVcgQq5aW1Mb3mi9NEgzZf4Pw7AYU9TpsN79Jl" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">09 Jan 2026</div>
+                    <div class="blog-text">🌿 Empieza el año con calma 🌿
+
+Regálate una pausa en Hotel La Palma, ubicado en el municipio de La Palma, Departamento de Chalatenango.
+Un oasis de naturaleza, arte y descanso donde puedes bajar el ritmo y reconectar.
+
+✨ Hospedaje entre bosque: Habitaciones decoradas al estilo de Fernando Llort.
+🍽️ Restaurante con sabores locales: Nuestro variado menú busca que comas rico y sano, ya que preparamos nuestros ingredientes en casa.
+🎨 Talleres de cerámica: Ven al único hotel donde incluye una clase de cerámica o por consumo de $10 p/p puedes hacer una pieza de barro con tus propias manos.
+🥾 Caminatas y tours: ¿Deseas explorar la montaña? Puedes hacerlo con nosotros y compartirte paquetes para que te lleves experiencias como hornear tu propia torta de yema.
+🎉 Eventos privados y retiros: Contamos con 2 salones para eventos corporativos, retiros, talleres y actividades que desees realizar en medio de la naturaleza.
+💍 Decoraciones especiales en habitaciones: Regala detalles memorables para ese ser querido que tanto amas.
+💆‍♂Actividades Wellness & Bienestar: Regálate un baño de barro o mascarillas de barro y relájate 
+
+📲 Escríbenos por WhatsApp  al +503 7010-0373 y reserva tu experiencia.
+Empieza el año con calma en Hotel La Palma.</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid022itP425NVTg3h774nqwZH984fnwmVcgQq5aW1Mb3mi9NEgzZf4Pw7AYU9TpsN79Jl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-den2-1.xx.fbcdn.net/v/t51.82787-15/613209835_18516712330065600_5420857883201906531_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=VzthS5VgV90Q7kNvwEfY_3E&_nc_oc=AdnBkYIKHozT8jRNEV_cii_3auFzKXL1TYftsjvyCFw9Aa6eHG5QkWCmOifPC9Fe0bU&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=lkar_5cHWy7RhLp3PXVj9Q&_nc_ss=8&oh=00_AfvhkgJLBw3OI8ANZ0bxookwxxjVQQqsu6HIpshxzCjHUQ&oe=69A875D0" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">09 Jan 2026</div>
+                    <div class="blog-text">Desconéctate, relájate y disfruta del entorno natural de nuestras habitaciones 🛌🌳
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #montana #lapalma</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid09joeHcktsQHTr5x9JB2LTjybq1UzNsGUk4E2vmuZERzB3Re7uH1aF26JX3wXJ2zCl" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/613057048_1281607454000027_1985368189697212897_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_aid=0&_nc_ohc=Li_5J0IBseQQ7kNvwHpnV2I&_nc_oc=AdmesyaSPpFAzkKtCnd37Hae_j_AzOfC_0ib_Zyk_mR8sBjhW5ADJOQdV_PR0rrJjOo&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=lkar_5cHWy7RhLp3PXVj9Q&_nc_ss=8&oh=00_AfvV2DfNftI4i76NZfYexzcdhld8NxoFVsbIPtn-3VePjw&oe=69A868CF" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">08 Jan 2026</div>
+                    <div class="blog-text">Los fines de semana saben mejor con una sopa de gallina india completa, hecha a fuego lento, con ingredientes frescos del campo y ese sabor que reconforta el alma.
+✨ Ideal para compartir en familia.
+(Rinde para 4 personas)
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel #sopadegallinaindia #lapalma</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0X7mzei21aMpGPSVuuin16Bz8qud2wy69FZcWSjtE2hFjFy6Hq7YASXd81yqKTHB3l" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-mia3-3.xx.fbcdn.net/v/t51.71878-10/610983511_1409979784154276_5629887425529354432_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=U5jts8ZifR8Q7kNvwGbIwZR&_nc_oc=Adm9g213tm3itb3DKBbz4mVZnpuEn7tKcUJipCaPeFCjYBzN_Jpyq_ylP9AwrjDmct4&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=1E2VW99RhT07MY22VFw4Ww&_nc_ss=8&oh=00_AfvsVQxc3G2BMgWvG2EmnG_Jo3huE4bdcx9tBkaJd4CHPQ&oe=69A85AD7" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">07 Jan 2026</div>
+                    <div class="blog-text">Por que también los peques pueden hacer arte con sus manitas ☺️🫶🏻
+
+📞 Reserva al +503 7010 - 0373
+💬 Envianos un mensaje por nuestras redes
+📮 hotellapalma@yahoo.com
+.
+.
+#wellnesselsalvador #hermanoslejanos #elsalvadortravel</div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/reel/1400629578466563/" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/608558971_1278778844282888_5554886203859550705_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=C56H6kyCKfIQ7kNvwFDCEuL&_nc_oc=AdlbGiABv6BKwlr0BlRe3KwSTXwHkDLbwoMkWsQqA1I2o1tfozQhPJA8A-k2h5WiLgY&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=1E2VW99RhT07MY22VFw4Ww&_nc_ss=8&oh=00_Aft9K01IEJjEMhtGvD5nf9q3o-oo9AwCuTSVlCr2gQ7o2Q&oe=69A87A37" alt="Imagen del post" class="blog-image" onerror="this.onerror=null; this.src='2022-07-13.webp';">
+                <div class="blog-content">
+                    <div class="blog-date">04 Jan 2026</div>
+                    <div class="blog-text"></div>
+                    <div class="blog-btn-container">
+                        <a href="https://www.facebook.com/hotellapalma/posts/1278778840949555:739980102030704" target="_blank" class="btn btn-outline" style="color: var(--color-accent-blue); border-color: var(--color-accent-blue);">
+                            Ver en Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+</div>
+    </main>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hotel La Palma</h3>
+                    <p>Fundado en 1942, somos tu santuario de montaña en Chalatenango. Disfruta del verdadero turismo
+                        naíf y reconecta con la naturaleza y el arte.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="experiencias.html">Experiencias Naíf</a></li>
+                        <li><a href="restaurante.html">Restaurante</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +503 7010-0373</li>
+                        <li><strong>Correo:</strong> hotellapalma@yahoo.com</li>
+                        <li><strong>Propietario:</strong> Don Salvador</li>
+                        <li><strong>Dirección:</strong> Centro de La Palma, Chalatenango</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel La Palma. Todos los derechos reservados. | Pet-friendly &bull; Wi-Fi Gratis &bull;
+                    Parqueo Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegación móvil -->
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/50370100373?text=Hola%20Hotel%20La%20Palma,%20me%20interesa%20hacer%20una%20reserva." class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
+        <svg viewBox="0 0 16 16" class="whatsapp-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+</body>
+
+</html>
