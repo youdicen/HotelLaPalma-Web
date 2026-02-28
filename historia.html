@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia y Eco-Diseño | Hotel La Palma</title>
+    <meta name="description"
+        content="Conoce la historia del Hotel La Palma, fundado en 1942, y nuestra filosofía de desconexión en 52 cabañas de montaña.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-earth-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: var(--space-xl) var(--space-sm) var(--space-lg);
+            border-bottom: 8px solid var(--color-accent-blue);
+        }
+
+        .page-header h1 {
+            color: var(--color-text-light);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .history-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .history-text h2 {
+            color: var(--color-accent-blue);
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .history-text p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: var(--space-sm);
+            line-height: 1.8;
+        }
+
+        .history-quote {
+            padding: var(--space-md);
+            margin: var(--space-md) 0;
+            border-left: 6px solid var(--color-accent-yellow);
+            background-color: var(--color-bg-white);
+            box-shadow: var(--shadow-sm);
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--color-forest-dark);
+        }
+
+        .history-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 5px solid var(--color-bg-white);
+        }
+
+        @media (max-width: 900px) {
+            .history-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .history-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra decorativa -->
+    <div class="decor-line"></div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo.png" alt="Hotel La Palma Logo" height="40">
+                Hotel La <span>Palma</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html" class="active">Historia y Diseño Ecológico</a></li>
+                <li><a href="experiencias.html">Turismo Naíf</a></li>
+                <li><a href="restaurante.html">Restaurante y Relajación</a></li>
+                <li><a href="menu_restaurante.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Nuestra Historia y Diseño Ecológico</h1>
+            <p>Un Legado de Tranquilidad en Chalatenango</p>
+        </div>
+    </header>
+
+    <!-- History Content -->
+    <main class="container py-xl bg-bg-offwhite">
+        <section class="history-section">
+            <div class="history-text">
+                <h2>El Legado de Narciso</h2>
+                <p>
+                    Somos orgullosamente uno de los hoteles más antiguos de El Salvador. Nuestras puertas abrieron por
+                    primera vez en <strong>1942</strong>, bajo la visión del italiano Don <strong>Narciso
+                        Genovese</strong>. Desde entonces, hemos sido un punto de encuentro entre la cultura local, el
+                    vibrante arte naíf y la majestuosidad de la montaña.
+                </p>
+                <p>
+                    Nuestro recinto cuenta con un diseño ecológico que respeta la topografía natural y la flora de
+                    Chalatenango, ofreciendo un entorno rústico distribuido en <strong>52 encantadoras habitaciones tipo
+                        cabaña</strong>. Cada pared está adornada con murales pintados a mano por artesanos locales,
+                    relatando la historia de la vida rural salvadoreña en colores vibrantes.
+                </p>
+
+                <div class="history-quote">
+                    "No tenemos televisores en las habitaciones para que nuestros huéspedes se desconecten de la rutina
+                    y verdaderamente sientan la naturaleza."
+                </div>
+
+                <p>
+                    Invitamos a nuestros visitantes a apagar sus pantallas y sintonizarse con el canto de los pájaros,
+                    el viento entre los pinos y la calidez humana que solo se encuentra en Hotel La Palma.
+                </p>
+            </div>
+            <div class="history-image">
+                <img src="assets/images/castillo.jpg"
+                    alt="Habitación rústica con murales de arte naíf, iluminada por la luz natural" class="border-naif">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hotel La Palma</h3>
+                    <p>Fundado en 1942, somos tu santuario de montaña en Chalatenango. Disfruta del verdadero turismo
+                        naíf y reconecta con la naturaleza y el arte.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="experiencias.html">Experiencias Naíf</a></li>
+                        <li><a href="restaurante.html">Restaurante</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +503 7010-0373</li>
+                        <li><strong>Correo:</strong> hotellapalma@yahoo.com</li>
+                        <li><strong>Propietario:</strong> Don Salvador</li>
+                        <li><strong>Dirección:</strong> Centro de La Palma, Chalatenango</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel La Palma. Todos los derechos reservados. | Pet-friendly &bull; Wi-Fi Gratis &bull;
+                    Parqueo Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegación móvil -->
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

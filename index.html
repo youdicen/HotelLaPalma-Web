@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel La Palma | Turismo Naíf en la Montaña</title>
+    <meta name="description"
+        content="Descubre el turismo Naíf y la naturaleza en Hotel La Palma, ubicado en el centro de Chalatenango, El Salvador. Reserva tu cabaña hoy.">
+    <!-- Estilos Globales -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CSS Específico para Inicio -->
+    <style>
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--color-earth-dark);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipN2rED1Jlv7yqCg1taoa4DJlpXeoPoRzVlqT67D=w1920-h1080-k-no');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            /* Oscurece un poco para que el texto resalte */
+            z-index: 1;
+            /* Naif border touch */
+            border-bottom: 8px solid var(--color-accent-yellow);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(62, 39, 35, 0.8) 0%, rgba(62, 39, 35, 0.4) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            color: var(--color-text-light);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--color-text-light);
+            margin-bottom: var(--space-sm);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            margin-bottom: var(--space-md);
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+            color: var(--color-bg-offwhite);
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background-color: var(--color-bg-white);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-lg);
+            border-top: 4px solid var(--color-accent-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--color-accent-red);
+        }
+
+        .card h3 {
+            margin-bottom: var(--space-xs);
+            color: var(--color-earth-brown);
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra decorativa -->
+    <div class="decor-line"></div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo.png" alt="Hotel La Palma Logo" height="40">
+                Hotel La <span>Palma</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="historia.html">Historia y Diseño Ecológico</a></li>
+                <li><a href="experiencias.html">Turismo Naíf</a></li>
+                <li><a href="restaurante.html">Restaurante y Relajación</a></li>
+                <li><a href="menu_restaurante.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Descubre el Turismo Naíf en la Montaña</h1>
+            <p class="hero-subtitle">
+                Ubicados en el vibrante centro de la ciudad de La Palma, Chalatenango.<br>
+                Disfruta de un <strong>clima fresco</strong> rodeado de <strong>frondosa naturaleza</strong> y relájate
+                en nuestra <strong>piscina</strong>.<br>Descubre el arte local en nuestro <strong>taller de
+                    alfarería</strong> y admira los murales que capturan el alma de El Salvador.
+            </p>
+            <a href="contacto.html" class="btn btn-primary"
+                style="font-size: 1.25rem; padding: 15px 40px; border: 2px solid var(--color-accent-yellow);">
+                Reserva tu Cabaña
+            </a>
+        </div>
+    </section>
+
+    <!-- Resumen de Beneficios -->
+    <section class="container mb-lg">
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Arte y Naturaleza</h3>
+                <p>Nuestras instalaciones están adornadas con pintura local autóctona, fusionándose con el verde intenso
+                    del bosque de pinos.</p>
+            </div>
+            <div class="card">
+                <h3>Desconexión Total</h3>
+                <p>Respira aire puro en un ambiente de temperatura fresca ideal para relajarse y escapar del bullicio de
+                    la ciudad.</p>
+            </div>
+            <div class="card">
+                <h3>Santuario de Montaña</h3>
+                <p>Disfruta de cabañas rústicas de madera que te invitan a descansar con comodidad y un espíritu
+                    ecológico.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Carousel Section -->
+    <section class="container mb-lg">
+        <h2 class="section-title">Novedades en Nuestras Redes</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <div class="carousel-track" id="carousel-track">
+                <!-- AUTOMATIC_CAROUSEL_INSERTION_POINT -->
+            </div>
+            <button class="carousel-btn next-btn">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hotel La Palma</h3>
+                    <p>Fundado en 1942, somos tu santuario de montaña en Chalatenango. Disfruta del verdadero turismo
+                        naíf y reconecta con la naturaleza y el arte.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="experiencias.html">Experiencias Naíf</a></li>
+                        <li><a href="restaurante.html">Restaurante</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +503 7010-0373</li>
+                        <li><strong>Correo:</strong> hotellapalma@yahoo.com</li>
+                        <li><strong>Propietario:</strong> Don Salvador</li>
+                        <li><strong>Dirección:</strong> Centro de La Palma, Chalatenango</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel La Palma. Todos los derechos reservados. | Pet-friendly &bull; Wi-Fi Gratis &bull;
+                    Parqueo Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegación móvil -->
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Carousel Script
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.getElementById('carousel-track');
+            if (!track) return;
+            const slides = Array.from(track.children);
+            if (slides.length === 0) return;
+            const nextButton = document.querySelector('.next-btn');
+            const prevButton = document.querySelector('.prev-btn');
+
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const slideWidth = slides[0].getBoundingClientRect().width;
+                const style = window.getComputedStyle(track);
+                const gap = parseFloat(style.getPropertyValue('gap')) || 0;
+
+                track.style.transform = 'translateX(-' + (currentIndex * (slideWidth + gap)) + 'px)';
+            }
+
+            nextButton.addEventListener('click', e => {
+                const maxIndex = window.innerWidth <= 600 ? slides.length - 1 : (window.innerWidth <= 900 ? slides.length - 2 : slides.length - 3);
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            prevButton.addEventListener('click', e => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                const maxIndex = window.innerWidth <= 600 ? slides.length - 1 : (window.innerWidth <= 900 ? slides.length - 2 : slides.length - 3);
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+                updateCarousel();
+            });
+        });
+    </script>
+</body>
+
+</html>

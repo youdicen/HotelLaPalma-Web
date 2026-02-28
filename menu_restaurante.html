@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Restaurante | Hotel La Palma</title>
+    <meta name="description"
+        content="Explora el menú de Hotel La Palma. Sopa de gallina india, desayunos entre montañas y nuestro famoso pie de higo.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-earth-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: var(--space-xl) var(--space-sm) var(--space-lg);
+            border-bottom: 8px solid var(--color-accent-red);
+        }
+
+        .page-header h1 {
+            color: var(--color-text-light);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .menu-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .menu-category {
+            margin-bottom: var(--space-xl);
+        }
+
+        .menu-category-title {
+            color: var(--color-accent-blue);
+            font-size: 2rem;
+            border-bottom: 3px solid var(--color-accent-yellow);
+            display: inline-block;
+            margin-bottom: var(--space-md);
+            padding-bottom: 5px;
+            font-family: var(--font-heading);
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
+        @media (max-width: 768px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .menu-item {
+            background: var(--color-bg-white);
+            border: 2px solid var(--color-earth-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-accent-yellow);
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-xs);
+            border-bottom: 1px dotted var(--color-earth-light);
+            padding-bottom: 5px;
+        }
+
+        .menu-item-title {
+            font-weight: bold;
+            color: var(--color-earth-dark);
+            font-size: 1.2rem;
+        }
+
+        .menu-item-price {
+            color: var(--color-forest-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .menu-item-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra decorativa -->
+    <div class="decor-line"></div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo.png" alt="Hotel La Palma Logo" height="40">
+                Hotel La <span>Palma</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia y Diseño</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="restaurante.html">Restaurante</a></li>
+                <li><a href="menu_restaurante.html" class="active">Menú</a></li>
+                <li><a href="contacto.html" class="btn btn-secondary" style="padding: 10px 20px;">Reserva Ya</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1>Nuestro Menú</h1>
+        <p>Sabores locales, ingredientes frescos de nuestro huerto ecológico y las recetas de montaña de Don Salvador.
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="menu-container">
+
+        <section class="menu-category">
+            <h2 class="menu-category-title">Desayunos</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Desayuno entre Montañas</span>
+                        <span class="menu-item-price">$6.50</span>
+                    </div>
+                    <div class="menu-item-desc">Huevos al gusto, frijoles de la olla, plátanos fritos, queso duro
+                        blando, crema artesanal, pan o tortillas y café cultivado en la zona alta.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Desayuno Típico Salvadoreño</span>
+                        <span class="menu-item-price">$5.00</span>
+                    </div>
+                    <div class="menu-item-desc">Dos pupusas (queso, revueltas o frijol con queso), acompañadas de
+                        curtido, salsa de tomate y una bebida caliente a elección.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2 class="menu-category-title">Almuerzos</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Sopa de Gallina India Completa</span>
+                        <span class="menu-item-price">$18.00</span>
+                    </div>
+                    <div class="menu-item-desc">¡Nuestra especialidad! Sopa sustanciosa servida con una porción de
+                        gallina asada, arroz, ensalada y tortillas tostaditas. *Rinde para 4 personas, solo fines de
+                        semana.*</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Torta Mexicana Estilo La Palma</span>
+                        <span class="menu-item-price">$7.00</span>
+                    </div>
+                    <div class="menu-item-desc">Pan artesanal horneado en casa, carne asada, guacamole fresco, frijoles
+                        y un toque de picante de la casa. Frescura de la zona alta.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Plato de Churrasco</span>
+                        <span class="menu-item-price">$12.50</span>
+                    </div>
+                    <div class="menu-item-desc">Corte de carne tierna a la parrilla, con chorizo jalapeño, casamiento,
+                        cuajada y cebollines marinados, condimentado con hierbas de nuestro huerto.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Filete de Pollo a la Plancha</span>
+                        <span class="menu-item-price">$9.00</span>
+                    </div>
+                    <div class="menu-item-desc">Pechuga asada a la perfección con finas hierbas locales, ensalada fresca
+                        del huerto y arroz blanco.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2 class="menu-category-title">Postres y Bebidas</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Nuestro Famoso "Pie de Higo"</span>
+                        <span class="menu-item-price">$3.50</span>
+                    </div>
+                    <div class="menu-item-desc">Un postre local irresistible, recién horneado y elaborado con higos
+                        dulces de nuestra cosecha.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Chocolate Caliente Artesanal</span>
+                        <span class="menu-item-price">$2.50</span>
+                    </div>
+                    <div class="menu-item-desc">Perfecto para el clima de nuestro santuario. Batido en tablilla al
+                        estilo salvadoreño tradicional.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Café de Altura</span>
+                        <span class="menu-item-price">$2.00</span>
+                    </div>
+                    <div class="menu-item-desc">Una taza de nuestro café estrictamente de altura cultivado en
+                        Chalatenango. Posible refill.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-title">Fresco Natural del Día</span>
+                        <span class="menu-item-price">$2.00</span>
+                    </div>
+                    <div class="menu-item-desc">Refrescante bebida natural preparada con frutas de temporada (Horchata,
+                        Arrayán, Tamarindo o Jamaica).</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hotel La Palma</h3>
+                    <p>Fundado en 1942, somos tu santuario de montaña en Chalatenango. Disfruta del verdadero turismo
+                        naíf y reconecta con la naturaleza y el arte.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="experiencias.html">Experiencias Naíf</a></li>
+                        <li><a href="restaurante.html">Restaurante</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +503 7010-0373</li>
+                        <li><strong>Correo:</strong> hotellapalma@yahoo.com</li>
+                        <li><strong>Propietario:</strong> Don Salvador</li>
+                        <li><strong>Dirección:</strong> Centro de La Palma, Chalatenango</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel La Palma. Todos los derechos reservados. | Pet-friendly &bull; Wi-Fi Gratis &bull;
+                    Parqueo Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegación móvil -->
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

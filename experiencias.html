@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Naíf | Hotel La Palma</title>
+    <meta name="description"
+        content="Vive experiencias inolvidables en Hotel La Palma con Turismo Naíf: baños de barro, cerámica, talleres de panadería rústica y apiturismo en Chalatenango.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-earth-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: var(--space-xl) var(--space-sm) var(--space-lg);
+            border-bottom: 8px solid var(--color-accent-blue);
+        }
+
+        .page-header h1 {
+            color: var(--color-text-light);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .page-header p {
+            color: var(--color-bg-offwhite);
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            padding: var(--space-lg) 0;
+        }
+
+        .exp-card {
+            background: var(--color-bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid transparent;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-accent-blue);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .exp-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 5px solid var(--color-accent-yellow);
+        }
+
+        .exp-content {
+            padding: var(--space-md);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .exp-card h3 {
+            color: var(--color-earth-dark);
+            font-size: 1.5rem;
+            margin-bottom: var(--space-xs);
+        }
+
+        .exp-card p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: var(--space-sm);
+            flex-grow: 1;
+        }
+
+        .exp-tag {
+            align-self: flex-start;
+            background-color: var(--color-forest-light);
+            color: var(--color-forest-green);
+            padding: 5px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+        }
+
+        /* Bloque final CTA */
+        .village-cta {
+            background-color: var(--color-accent-yellow);
+            color: var(--color-earth-dark);
+            text-align: center;
+            padding: var(--space-xl) var(--space-md);
+            border-radius: var(--radius-lg);
+            margin: var(--space-lg) auto;
+            border: 4px solid var(--color-accent-red);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .village-cta::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background-color: var(--color-accent-blue);
+        }
+
+        .village-cta::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background-color: var(--color-accent-blue);
+        }
+
+        .village-cta h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            margin-bottom: var(--space-md);
+        }
+
+        .village-cta p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto var(--space-md);
+        }
+    </style>
+</head>
+
+<body class="bg-bg-offwhite">
+    <!-- Barra decorativa -->
+    <div class="decor-line"></div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo.png" alt="Hotel La Palma Logo" height="40">
+                Hotel La <span>Palma</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia y Diseño Ecológico</a></li>
+                <li><a href="experiencias.html" class="active">Turismo Naíf</a></li>
+                <li><a href="restaurante.html">Restaurante y Relajación</a></li>
+                <li><a href="menu_restaurante.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Turismo Naíf y Experiencias</h1>
+            <p>Conecta tus sentidos con la naturaleza, la tierra y las tradiciones vibrantes de Chalatenango a través de
+                talleres vivenciales únicos.</p>
+        </div>
+    </header>
+
+    <!-- Experiencias Grid -->
+    <main class="container">
+        <div class="experiences-grid">
+
+            <!-- Experiencia 1 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop"
+                    alt="Persona relajándose en un spa con elementos naturales" class="exp-img">
+                <div class="exp-content">
+                    <span class="exp-tag">Relajación</span>
+                    <h3>Baños de Barro Natural</h3>
+                    <p>Encuentra paz en nuestro espacio de relajación. Descubre los poderes curativos de la tierra
+                        mientras te cubres de barro natural rico en minerales, todo rodeado por la fresca brisa de la
+                        montaña.</p>
+                </div>
+            </div>
+
+            <!-- Experiencia 2 -->
+            <div class="exp-card">
+                <img src="https://lh3.googleusercontent.com/geougc/AF1QipM0natCcIq-2YH3lcH0Zme6EsUFq0DXj8JAPMGo=h400-no"
+                    alt="Taller de cerámica en medio del bosque" class="exp-img">
+                <div class="exp-content">
+                    <span class="exp-tag">Cultura Viva</span>
+                    <h3>Taller de Cerámica</h3>
+                    <p>Disfruta de nuestro taller de cerámica en medio del bosque. Rescata y honra las tradiciones
+                        locales mientras conectas con la naturaleza del entorno.</p>
+                </div>
+            </div>
+
+            <!-- Experiencia 3 -->
+            <div class="exp-card">
+                <img src="https://lh3.googleusercontent.com/geougc/AF1QipO95tX3nA9iTV6H_o7ryZvAWzFR5IwDva6yfumT=h400-no"
+                    alt="Piezas de barro pintadas con acrílico" class="exp-img">
+                <div class="exp-content">
+                    <span class="exp-tag">Arte Naíf</span>
+                    <h3>Pintura en Arcilla</h3>
+                    <p>¡NUEVO! Ahora puedes pintar piezas de barro en bizcocho utilizando pinturas acrílicas, con
+                        acabado barnizado. Crea hermosas piezas decorativas mientras aprendes del estilo naíf
+                        tradicional de La Palma.</p>
+                </div>
+            </div>
+
+            <!-- Experiencia 4 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1587049352847-4d4fa71158c5?q=80&w=800&auto=format&fit=crop"
+                    alt="Apicultor recolectando miel de las colmenas con abejas" class="exp-img">
+                <div class="exp-content">
+                    <span class="exp-tag">Conservación</span>
+                    <h3>Apiturismo Guiado</h3>
+                    <p>Ponte tu traje protector y adéntrate en el mundo de las abejas. Aprende sobre el proceso de
+                        extracción de nuestra miel pura mientras apoyas la conservación de uno de los insectos más
+                        vitales del mundo.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Call to Action - 102 Talleres -->
+        <section class="village-cta">
+            <h2>¡La aventura te espera más allá del hotel!</h2>
+            <p>
+                La herencia artística late en cada rincón. Te invitamos a pasear por las vibrantes calles de la ciudad
+                de La Palma para visitar los más de <strong>102 talleres de artesanías familiares</strong>. Observa el
+                arte naíf cobrar vida en madera y semillas de copinol, pintadas con los característicos colores que
+                nacen de nuestro pueblo.
+            </p>
+            <a href="contacto.html" class="btn btn-outline"
+                style="border-color: var(--color-earth-dark); color: var(--color-earth-dark); font-weight: bold; border-width: 3px;">
+                Planifica tu Recorrido
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hotel La Palma</h3>
+                    <p>Fundado en 1942, somos tu santuario de montaña en Chalatenango. Disfruta del verdadero turismo
+                        naíf y reconecta con la naturaleza y el arte.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="experiencias.html">Experiencias Naíf</a></li>
+                        <li><a href="restaurante.html">Restaurante</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +503 7010-0373</li>
+                        <li><strong>Correo:</strong> hotellapalma@yahoo.com</li>
+                        <li><strong>Propietario:</strong> Don Salvador</li>
+                        <li><strong>Dirección:</strong> Centro de La Palma, Chalatenango</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel La Palma. Todos los derechos reservados. | Pet-friendly &bull; Wi-Fi Gratis &bull;
+                    Parqueo Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegación móvil -->
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

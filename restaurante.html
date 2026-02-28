@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante y Relajación | Hotel La Palma</title>
+    <meta name="description"
+        content="Gastronomía de nuestro propio huerto ecológico, pie de higo, chocolate caliente y nuestras áreas de piscina y relajación en Chalatenango.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-earth-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: var(--space-xl) var(--space-sm) var(--space-lg);
+            border-bottom: 8px solid var(--color-accent-blue);
+        }
+
+        .page-header h1 {
+            color: var(--color-text-light);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+            padding: var(--space-xl) 0;
+        }
+
+        .split-section:nth-of-type(even) {
+            direction: rtl;
+            /* reverse order for zig-zag effect */
+            background-color: var(--color-earth-light);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .split-section:nth-of-type(even) .split-content {
+            direction: ltr;
+            /* fix readable text direction */
+        }
+
+        .split-content h2 {
+            color: var(--color-accent-blue);
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            margin-bottom: var(--space-md);
+        }
+
+        .split-content p {
+            font-size: 1.15rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .split-content ul {
+            list-style: none;
+            margin-top: var(--space-md);
+        }
+
+        .split-content ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: var(--space-sm);
+            font-weight: 500;
+            color: var(--color-earth-dark);
+        }
+
+        .split-content ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--color-accent-red);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .split-gallery {
+            position: relative;
+        }
+
+        .split-img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--color-accent-yellow);
+        }
+
+        /* Adjustments for mobile view */
+        @media (max-width: 900px) {
+
+            .split-section,
+            .split-section:nth-of-type(even) {
+                grid-template-columns: 1fr;
+                direction: ltr;
+                text-align: center;
+                gap: var(--space-lg);
+                padding: var(--space-lg) var(--space-sm);
+            }
+
+            .split-section:nth-of-type(even) .split-content {
+                direction: ltr;
+            }
+
+            .split-content ul li {
+                text-align: left;
+            }
+
+            .split-img {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-bg-offwhite">
+    <!-- Barra decorativa -->
+    <div class="decor-line"></div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo.png" alt="Hotel La Palma Logo" height="40">
+                Hotel La <span>Palma</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia y Diseño Ecológico</a></li>
+                <li><a href="experiencias.html">Turismo Naíf</a></li>
+                <li><a href="restaurante.html" class="active">Restaurante y Relajación</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Restaurante y Relajación</h1>
+            <p>Saborea ingredientes frescos de nuestro huerto y descansa plácidamente escuchando la naturaleza.</p>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <main>
+
+        <!-- Gastronomía -->
+        <section class="split-section container">
+            <div class="split-content">
+                <h2>Comida para el Corazón y la Montaña</h2>
+                <p>Nuestro restaurante se ubica en una amplia y gran terraza de madera donde la brisa fría te envuelve.
+                    Aquí, los aromas de la comida típica salvadoreña se mezclan con los olores del bosque de pinos.</p>
+                <p>Nuestra mayor inspiración culinaria nace de la tierra: condimentamos y preparamos nuestros platillos
+                    usando finas hierbas sembradas y cultivadas en nuestros propios huertos orgánicos.</p>
+                <ul>
+                    <li><strong>Desayuno entre Montañas:</strong> Un espacio rodeado de naturaleza, ideal para comenzar
+                        el día con calma, buena comida y aire fresco en el corazón de La Palma.</li>
+                    <li><strong>Sopa de Gallina India Completa:</strong> ¡Come rico en el almuerzo! Disfruta de nuestra
+                        sopa especial, disponible exclusivamente los fines de semana. Rinde para 4 personas.</li>
+                    <li><strong>Nuestro Famoso "Pie de Higo":</strong> Un postre local irresistible, ideal para el clima
+                        de nuestro santuario, acompañado de café artesanal de altura.</li>
+                </ul>
+            </div>
+            <div class="split-gallery">
+                <img src="https://lh3.googleusercontent.com/geougc/AF1QipPXmm4QUY9QEKNQa3LmvNDnxETyMH9eipfuHv9l=h400-no"
+                    alt="Desayuno entre montañas con café" class="split-img" style="margin-bottom: 20px;">
+                <img src="https://lh3.googleusercontent.com/geougc/AF1QipN7g-y0n1xzJSsdjmZJ_hGfjDfZYs9as2Pmd5k0=h400-no"
+                    alt="Sopa de gallina india completa" class="split-img"
+                    style="border-color: var(--color-forest-green);">
+            </div>
+        </section>
+
+        <!-- Zona de Relajación -->
+        <section class="split-section" style="padding: var(--space-xl) var(--space-sm);">
+            <div class="container"
+                style="display: grid; grid-template-columns: inherit; gap: inherit; align-items: center;">
+                <div class="split-content">
+                    <h2 style="color: var(--color-earth-dark);">Sumérgete en la Serenidad</h2>
+                    <p>En el corazón de nuestro hotel, más allá del vibrante arte de los murales, encontrarás espacios
+                        diseñados únicamente para la contemplación, la paz y el silencio total.</p>
+                    <p>Flota en nuestra refrescante <strong>piscina al aire libre</strong> rodeada de imponentes árboles
+                        que danzan con el viento. Relájate toda la tarde leyendo un buen libro o conversando con los
+                        tuyos en nuestras abundantes <strong>hamacas tejidas a mano</strong> y llenas de cálidos
+                        colores.</p>
+                </div>
+                <div class="split-gallery" style="direction: ltr;">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMBEiJf9mgBoI4a_IAQ2iur92LzFCvPl8hMjr4L=w1920-h1080-k-no"
+                        alt="Piscina exterior en Hotel La Palma rodeada de naturaleza" class="split-img border-naif">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hotel La Palma</h3>
+                    <p>Fundado en 1942, somos tu santuario de montaña en Chalatenango. Disfruta del verdadero turismo
+                        naíf y reconecta con la naturaleza y el arte.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="experiencias.html">Experiencias Naíf</a></li>
+                        <li><a href="restaurante.html">Restaurante</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +503 7010-0373</li>
+                        <li><strong>Correo:</strong> hotellapalma@yahoo.com</li>
+                        <li><strong>Propietario:</strong> Don Salvador</li>
+                        <li><strong>Dirección:</strong> Centro de La Palma, Chalatenango</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel La Palma. Todos los derechos reservados. | Pet-friendly &bull; Wi-Fi Gratis &bull;
+                    Parqueo Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegación móvil -->
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

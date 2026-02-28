@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Reservas | Hotel La Palma</title>
+    <meta name="description"
+        content="Reserva directamente con nosotros. Somos pet-friendly, ofrecemos Wi-Fi gratis, agua caliente y parqueo. Contacta a Don Salvador.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-earth-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: var(--space-xl) var(--space-sm) var(--space-lg);
+            border-bottom: 8px solid var(--color-accent-blue);
+        }
+
+        .page-header h1 {
+            color: var(--color-text-light);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            padding: var(--space-xl) 0;
+        }
+
+        /* Formulario */
+        .booking-form {
+            background: var(--color-bg-white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border-top: 5px solid var(--color-accent-yellow);
+        }
+
+        .booking-form h2 {
+            margin-bottom: var(--space-md);
+            color: var(--color-earth-dark);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-sm);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--color-earth-brown);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #EEE;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-accent-blue);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-sm);
+        }
+
+        /* Información de Contacto y Amenidades */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .info-card {
+            background-color: var(--color-earth-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-sm) var(--space-md);
+            border-left: 4px solid var(--color-accent-red);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--color-bg-white);
+            padding: var(--space-sm);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            font-weight: 500;
+            color: var(--color-forest-dark);
+        }
+
+        .amenity-emoji {
+            font-size: 1.5rem;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-top: var(--space-md);
+            border: 4px solid var(--color-earth-dark);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .pet-image {
+            width: 100%;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            margin-top: var(--space-md);
+            border: 3px solid var(--color-accent-blue);
+        }
+
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-bg-offwhite">
+    <!-- Barra decorativa -->
+    <div class="decor-line"></div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo.png" alt="Hotel La Palma Logo" height="40">
+                Hotel La <span>Palma</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir Menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia y Diseño Ecológico</a></li>
+                <li><a href="experiencias.html">Turismo Naíf</a></li>
+                <li><a href="restaurante.html">Restaurante y Relajación</a></li>
+                <li><a href="menu_restaurante.html">Menú</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Contacto y Reservas</h1>
+            <p>Reserva directamente con nosotros sin intermediarios y recibe el trato familiar que mereces.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="contact-grid">
+
+            <!-- Formulario de Reservas -->
+            <div class="booking-form">
+                <h2>Envía tu Solicitud de Reserva</h2>
+                <p style="margin-bottom: var(--space-md); color: #666;">Completa los detalles y nuestro propietario,
+                    <strong>Don Salvador</strong>, te contestará personalmente a la brevedad posible.
+                </p>
+                <form action="#" method="POST"
+                    onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Don Salvador se pondrá en contacto pronto.');">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nombre Completo</label>
+                        <input type="text" id="name" class="form-control" placeholder="Ej. Ana Martínez" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Correo Electrónico</label>
+                        <input type="email" id="email" class="form-control" placeholder="tu_correo@ejemplo.com"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Teléfono de Contacto</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="(503) 0000-0000" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="checkin">Check-in</label>
+                            <input type="date" id="checkin" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="checkout">Check-out</label>
+                            <input type="date" id="checkout" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="guests">Adultos y Niños</label>
+                        <input type="number" id="guests" class="form-control" placeholder="Ej. 2 Adultos, 1 Niño"
+                            min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Mensaje Adicional o Pet-friendy</label>
+                        <textarea id="message" class="form-control" rows="4"
+                            placeholder="¿Viajas con mascotas? ¿Alguna instrucción especial?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; margin-top: var(--space-sm);">Solicitar Reserva</button>
+                </form>
+            </div>
+
+            <!-- Información Contacto -->
+            <div class="contact-info">
+                <div>
+                    <h2 style="color: var(--color-earth-dark); font-family: var(--font-heading); margin-bottom: 10px;">
+                        Comunícate Directamente</h2>
+                    <div class="info-card">
+                        <p style="margin-bottom: 5px;"><strong>Teléfono Directo:</strong> +503 7010-0373</p>
+                        <p style="margin-bottom: 5px;"><strong>Correo:</strong> hotellapalma@yahoo.com</p>
+                        <p><strong>Ubicación:</strong> Centro de la ciudad de La Palma, Chalatenango. Muy cerca del
+                            emblemático Cerro El Pital.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--color-earth-dark); margin-bottom: 10px;">Nuestras Amenidades</h3>
+                    <div class="amenities-grid">
+                        <div class="amenity-item">
+                            <span class="amenity-emoji">🐾</span> Pet-friendly
+                        </div>
+                        <div class="amenity-item">
+                            <span class="amenity-emoji">📶</span> Wi-Fi Gratuito
+                        </div>
+                        <div class="amenity-item">
+                            <span class="amenity-emoji">🚿</span> Agua Caliente
+                        </div>
+                        <div class="amenity-item">
+                            <span class="amenity-emoji">🚗</span> Parqueo Seguro
+                        </div>
+                        <div class="amenity-item">
+                            <span class="amenity-emoji">🏔️</span> Vistas a la Montaña
+                        </div>
+                        <div class="amenity-item" style="font-size: 0.95rem;">
+                            <span class="amenity-emoji">🎨</span> Arte Naíf Local
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen descriptiva de mascotas -->
+                <img src="assets/images/pet_family.png"
+                    alt="Familia feliz con su mascota relajándose en las áreas verdes del hotel" class="pet-image">
+
+                <!-- Mapa -->
+                <div class="map-container">
+                    <!-- Mapa de Google Embebido Centrado en Chalatenango / La Palma -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15474.3800688469!2d-89.176472!3d14.316823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62f928eeb318bf%3A0xe96c4ce3439b8bc4!2sLa%20Palma%2C%20El%20Salvador!5e0!3m2!1sen!2sus!4v1701000000000!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hotel La Palma</h3>
+                    <p>Fundado en 1942, somos tu santuario de montaña en Chalatenango. Disfruta del verdadero turismo
+                        naíf y reconecta con la naturaleza y el arte.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="experiencias.html">Experiencias Naíf</a></li>
+                        <li><a href="restaurante.html">Restaurante</a></li>
+                        <li><a href="menu_restaurante.html">Menú</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +503 7010-0373</li>
+                        <li><strong>Correo:</strong> hotellapalma@yahoo.com</li>
+                        <li><strong>Propietario:</strong> Don Salvador</li>
+                        <li><strong>Dirección:</strong> Centro de La Palma, Chalatenango</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel La Palma. Todos los derechos reservados. | Pet-friendly &bull; Wi-Fi Gratis &bull;
+                    Parqueo Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegación móvil -->
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
