@@ -11,117 +11,156 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- CSS Específico para Inicio -->
-    <style>
-        .hero {
-            position: relative;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: var(--color-earth-dark);
-        }
+    .hero-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 85vh;
+    background: var(--color-earth-dark);
+    border-bottom: 8px solid var(--color-accent-yellow);
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://lh3.googleusercontent.com/p/AF1QipN2rED1Jlv7yqCg1taoa4DJlpXeoPoRzVlqT67D=w1920-h1080-k-no');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.7;
-            /* Oscurece un poco para que el texto resalte */
-            z-index: 1;
-            /* Naif border touch */
-            border-bottom: 8px solid var(--color-accent-yellow);
-        }
+    .hero-carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, rgba(62, 39, 35, 0.8) 0%, rgba(62, 39, 35, 0.4) 100%);
-            z-index: 2;
-        }
+    .hero-slide {
+    flex: 0 0 100%;
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 800px;
-            padding: var(--space-xl) var(--space-md);
-            text-align: center;
-            color: var(--color-text-light);
-            animation: fadeIn 1s ease-out;
-        }
+    .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: 1;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+    .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(62, 39, 35, 0.8) 0%, rgba(62, 39, 35, 0.4) 100%);
+    z-index: 2;
+    }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .hero-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-text-light);
+    border: 2px solid transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    }
 
-        .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            color: var(--color-text-light);
-            margin-bottom: var(--space-sm);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+    .hero-carousel-btn:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-earth-dark);
+    }
 
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            margin-bottom: var(--space-md);
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            line-height: 1.8;
-            color: var(--color-bg-offwhite);
-        }
+    .hero-prev-btn {
+    left: 20px;
+    }
 
-        .feature-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-md);
-            margin-top: -80px;
-            position: relative;
-            z-index: 10;
-        }
+    .hero-next-btn {
+    right: 20px;
+    }
 
-        .card {
-            background-color: var(--color-bg-white);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            box-shadow: var(--shadow-lg);
-            border-top: 4px solid var(--color-accent-blue);
-            transition: transform 0.3s ease;
-        }
+    .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    width: 90%;
+    padding: var(--space-xl) var(--space-md);
+    text-align: center;
+    color: var(--color-text-light);
+    animation: fadeIn 1s ease-out;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-top-color: var(--color-accent-red);
-        }
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
 
-        .card h3 {
-            margin-bottom: var(--space-xs);
-            color: var(--color-earth-brown);
-        }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
 
-        .card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
+    .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-bottom: var(--space-md);
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.8;
+    color: var(--color-bg-offwhite);
+    }
+
+    .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+    }
+
+    .card {
+    background-color: var(--color-bg-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-lg);
+    border-top: 4px solid var(--color-accent-blue);
+    transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--color-accent-red);
+    }
+
+    .card h3 {
+    margin-bottom: var(--space-xs);
+    color: var(--color-earth-brown);
+    }
+
+    .card p {
+    color: #666;
+    font-size: 0.95rem;
+    }
     </style>
 </head>
 
@@ -148,21 +187,114 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Descubre el Turismo Naíf en la Montaña</h1>
-            <p class="hero-subtitle">
-                Ubicados en el vibrante centro de la ciudad de La Palma, Chalatenango.<br>
-                Disfruta de un <strong>clima fresco</strong> rodeado de <strong>frondosa naturaleza</strong> y relájate
-                en nuestra <strong>piscina</strong>.<br>Descubre el arte local en nuestro <strong>taller de
-                    alfarería</strong> y admira los murales que capturan el alma de El Salvador.
-            </p>
-            <a href="contacto.html" class="btn btn-primary"
-                style="font-size: 1.25rem; padding: 15px 40px; border: 2px solid var(--color-accent-yellow);">
-                Reserva tu Cabaña
-            </a>
-        </div>
+    <!-- Hero Section Carousel -->
+    <section class="hero-carousel-container">
+        <button class="hero-carousel-btn hero-prev-btn">&lt;</button>
+        <div class="hero-carousel-track" id="hero-carousel-track">
+            <!-- Primera imagen original (Estatica) -->
+            <div class="hero-slide">
+                <div class="hero-background"
+                    style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipN2rED1Jlv7yqCg1taoa4DJlpXeoPoRzVlqT67D=w1920-h1080-k-no');">
+                </div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Descubre el Turismo Naíf en la Montaña</h1>
+                    <p class="hero-subtitle">
+                        Ubicados en el vibrante centro de la ciudad de La Palma, Chalatenango.<br>
+                        Disfruta de un <strong>clima fresco</strong> rodeado de <strong>frondosa naturaleza</strong> y
+                        relájate
+                        en nuestra <strong>piscina</strong>.<br>Descubre el arte local en nuestro <strong>taller de
+                            alfarería</strong> y admira los murales que capturan el alma de El Salvador.
+                    </p>
+                    <a href="contacto.html" class="btn btn-primary"
+                        style="font-size: 1.25rem; padding: 15px 40px; border: 2px solid var(--color-accent-yellow);">
+                        Reserva tu Cabaña
+                    </a>
+                </div>
+            </div>
+            <!-- AUTOMATIC_HERO_CAROUSEL_INSERTION_POINT -->
+            <div class="hero-slide">
+                <div class="hero-background" style="background-image: url('https://scontent-lga3-1.xx.fbcdn.net/v/t51.82787-15/641708065_18528726409065600_8258153208539127220_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=dD5mEm9ON6EQ7kNvwFTDm0f&_nc_oc=AdnE0N4VKL4mv4usEVwSF1Ase7UG4Fxpe1GEZElEEHeQScZfne2QD_EV4m1Gc4jsU9Q&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=TRF5db6rn8Q-qoFiOFFxRg&_nc_ss=8&oh=00_AftyrgGtEINEYf10dsZwFuovjNaveqFMuNgRsX2JvMN6Fw&oe=69A88653');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 20px;">27 Feb 2026</h2>
+                    <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 30px auto;">
+                        El arte aprender a hacer piezas de barro…es una experiencia que no te recomendamos saltar cuando vengas a La Palma
+📩 Escríbeno
+📞 Restaurante al +50...
+                    </p>
+                    <a href="https://www.facebook.com/hotellapalma/posts/pfbid0q7pnpyeLwwC6Ynapwzc8oTNja6qD2nx4oM7CWrUG9XZ4gdJMR63BnWvWC9t6zUMkl" target="_blank" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 12px 30px; border: 2px solid var(--color-accent-blue); background-color: var(--color-accent-blue); color: var(--color-text-light);">
+                        Ver Novedad en Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-background" style="background-image: url('https://scontent-lga3-3.xx.fbcdn.net/v/t51.71878-10/640422936_893431927018146_2425652064639747052_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=gxQxAsuhb1MQ7kNvwHQWOBz&_nc_oc=Adn0QtuDvlhcFTdfVLz1RKKCB470TNcyAeDf91M2HJZ76r4sohSjbRw8GA0qe9v7wwQ&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=TRF5db6rn8Q-qoFiOFFxRg&_nc_ss=8&oh=00_AftVJFJgPUzsNVNLqi78QGDcX31-z3FVWHhphpr0vzL_7g&oe=69A87F91');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 20px;">26 Feb 2026</h2>
+                    <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 30px auto;">
+                        Ven a la montaña a sentirte libre y a disfrutar de una clase de cerámica, ¿que harías en el torno? Una taza, un plato o una maceta 🤔 ¡te leemos!
+
+📞...
+                    </p>
+                    <a href="https://www.facebook.com/reel/1587355199153787/" target="_blank" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 12px 30px; border: 2px solid var(--color-accent-blue); background-color: var(--color-accent-blue); color: var(--color-text-light);">
+                        Ver Novedad en Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-background" style="background-image: url('https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/641515558_1322198766607562_5986853636861484589_n.png?stp=dst-png_p180x540&_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=AC_-6Jcb78AQ7kNvwE0Sa1r&_nc_oc=AdmXaWU-Ooa4l96xFFHd2vw34rI_mnzLQzUrmKiVMP2HWebsiCeXA54svGvqqhyQLBM&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=TRF5db6rn8Q-qoFiOFFxRg&_nc_ss=8&oh=00_Afvu0cKk_4QBQbNYDXu6vNiKeizzc1JXRX3gb5dMuBJ5nw&oe=69A85A1F');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 20px;">26 Feb 2026</h2>
+                    <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 30px auto;">
+                        
+                    </p>
+                    <a href="https://www.facebook.com/hotellapalma/posts/891659977076277:891659977076277" target="_blank" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 12px 30px; border: 2px solid var(--color-accent-blue); background-color: var(--color-accent-blue); color: var(--color-text-light);">
+                        Ver Novedad en Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-background" style="background-image: url('https://www.facebook.com/hotellapalma/posts/pfbid0wxhFNhzSV5WGpWcJAWAXZCY9sjQ7ig3A2YWMqcZDVrg1XawbYsr6ZMekA2j84H8Ql');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 20px;">25 Feb 2026</h2>
+                    <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 30px auto;">
+                        ¿Estás buscando el lugar perfecto para realizar tus eventos? ✨
+Te presentamos nuestro Salón Miramundo, el espacio ideal para:
+✔ Capacitaciones
+✔ Ta...
+                    </p>
+                    <a href="https://www.facebook.com/hotellapalma/posts/pfbid0wxhFNhzSV5WGpWcJAWAXZCY9sjQ7ig3A2YWMqcZDVrg1XawbYsr6ZMekA2j84H8Ql" target="_blank" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 12px 30px; border: 2px solid var(--color-accent-blue); background-color: var(--color-accent-blue); color: var(--color-text-light);">
+                        Ver Novedad en Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-background" style="background-image: url('https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/641602011_1320665876760851_6216037511490959264_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=rOxQRjmWdKUQ7kNvwHP-BLq&_nc_oc=AdmomFbIZec20HntGEO0xgyxTvJP2_TiMQQDYFCGhWw7PVS_bVVW_ucQDXnt7On7_0g&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=-Phvdb0gSbV6jngb_SB08w&_nc_ss=8&oh=00_Afu_D8Q3mkdb6rY06O3Q5gogvsafBg-9R5Y5c6TfPCFJoQ&oe=69A87B85');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 20px;">24 Feb 2026</h2>
+                    <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 30px auto;">
+                        Aquí la #tortamexicana sabe diferente… porque el pan lo hacemos nosotros y la frescura viene de la zona alta.
+
+📞 Restaurante al +503 7010 - 0373
+💬 ...
+                    </p>
+                    <a href="https://www.facebook.com/hotellapalma/posts/pfbid02eDw8T7rByLruTFJVCSPDw4wt1btAGkNKw7jGGn4mti8gtQRVNzuegGECr1oDsw14l" target="_blank" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 12px 30px; border: 2px solid var(--color-accent-blue); background-color: var(--color-accent-blue); color: var(--color-text-light);">
+                        Ver Novedad en Facebook
+                    </a>
+                </div>
+            </div>
+</div>
+        <button class="hero-carousel-btn hero-next-btn">&gt;</button>
     </section>
 
     <!-- Resumen de Beneficios -->
@@ -185,67 +317,7 @@
             </div>
         </div>
     </section>
-    <!-- Carousel Section -->
-    <section class="container mb-lg">
-        <h2 class="section-title">Novedades en Nuestras Redes</h2>
-        <div class="carousel-container">
-            <button class="carousel-btn prev-btn">&lt;</button>
-            <div class="carousel-track" id="carousel-track">
-<!-- AUTOMATIC_CAROUSEL_INSERTION_POINT -->
-                <div class="carousel-slide">
-                    <img src="https://scontent.foma1-2.fna.fbcdn.net/v/t51.82787-15/641708065_18528726409065600_8258153208539127220_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=dD5mEm9ON6EQ7kNvwHP_Egp&_nc_oc=AdmZXM6t8k_Xk-_8rbAnjzCKJP5_-lWXNHybjm08rm4hB8GzojGa3hm27NBdnFQU6Uo&_nc_zt=23&_nc_ht=scontent.foma1-2.fna&_nc_gid=5PA-_IGgkRVvUOeiprvKsA&_nc_ss=8&oh=00_AftJ8egsW9p_7e7Y-niCnvSYX6h6nmtFWQlLSt1UNgXhmQ&oe=69A88653" alt="Post image">
-                    <div class="carousel-slide-content">
-                        <p class="post-date">27 Feb 2026</p>
-                        <p>El arte aprender a hacer piezas de barro…es una experiencia que no te recomendamos saltar cuando vengas a La Palma
-📩 Escríbeno
-📞 Restaurante al +50...</p>
-                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0q7pnpyeLwwC6Ynapwzc8oTNja6qD2nx4oM7CWrUG9XZ4gdJMR63BnWvWC9t6zUMkl" target="_blank" class="btn btn-outline" style="border-color: var(--color-accent-blue); color: var(--color-accent-blue); padding: 5px 15px; margin-top: 10px;">Ver en Facebook</a>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://scontent.foma1-2.fna.fbcdn.net/v/t51.71878-10/640422936_893431927018146_2425652064639747052_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=gxQxAsuhb1MQ7kNvwE0NmL9&_nc_oc=AdnAjOOert8t0zAgy8hseUDFKl3OzhUGQvDNJ4QG3MTHi6dBPlAxleifvSzGL9Md4yg&_nc_zt=23&_nc_ht=scontent.foma1-2.fna&_nc_gid=5PA-_IGgkRVvUOeiprvKsA&_nc_ss=8&oh=00_Afu4GR6c5XuTvstRT0h8xDq5MjNfZsAxjVsGk806OB1lHA&oe=69A87F91" alt="Post image">
-                    <div class="carousel-slide-content">
-                        <p class="post-date">26 Feb 2026</p>
-                        <p>Ven a la montaña a sentirte libre y a disfrutar de una clase de cerámica, ¿que harías en el torno? Una taza, un plato o una maceta 🤔 ¡te leemos!
 
-📞...</p>
-                        <a href="https://www.facebook.com/reel/1587355199153787/" target="_blank" class="btn btn-outline" style="border-color: var(--color-accent-blue); color: var(--color-accent-blue); padding: 5px 15px; margin-top: 10px;">Ver en Facebook</a>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://scontent.foma1-2.fna.fbcdn.net/v/t39.30808-6/641515558_1322198766607562_5986853636861484589_n.png?stp=dst-png_p180x540&_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=AC_-6Jcb78AQ7kNvwGBq0CY&_nc_oc=AdkIHFZXQs6Bw_SykOaF-56UxMA1gZd6lpRXNm_xS_CGB12AiuXz7f2TwW6_zvhoIVs&_nc_zt=23&_nc_ht=scontent.foma1-2.fna&_nc_gid=5PA-_IGgkRVvUOeiprvKsA&_nc_ss=8&oh=00_AfuWoAlqbdsxNlJGN9qCndsqCIv8E5GutK-hoKTQf8mxHw&oe=69A85A1F" alt="Post image">
-                    <div class="carousel-slide-content">
-                        <p class="post-date">26 Feb 2026</p>
-                        <p></p>
-                        <a href="https://www.facebook.com/hotellapalma/posts/891659977076277:891659977076277" target="_blank" class="btn btn-outline" style="border-color: var(--color-accent-blue); color: var(--color-accent-blue); padding: 5px 15px; margin-top: 10px;">Ver en Facebook</a>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://www.facebook.com/hotellapalma/posts/pfbid0wxhFNhzSV5WGpWcJAWAXZCY9sjQ7ig3A2YWMqcZDVrg1XawbYsr6ZMekA2j84H8Ql" alt="Post image">
-                    <div class="carousel-slide-content">
-                        <p class="post-date">25 Feb 2026</p>
-                        <p>¿Estás buscando el lugar perfecto para realizar tus eventos? ✨
-Te presentamos nuestro Salón Miramundo, el espacio ideal para:
-✔ Capacitaciones
-✔ Ta...</p>
-                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid0wxhFNhzSV5WGpWcJAWAXZCY9sjQ7ig3A2YWMqcZDVrg1XawbYsr6ZMekA2j84H8Ql" target="_blank" class="btn btn-outline" style="border-color: var(--color-accent-blue); color: var(--color-accent-blue); padding: 5px 15px; margin-top: 10px;">Ver en Facebook</a>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/641602011_1320665876760851_6216037511490959264_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=rOxQRjmWdKUQ7kNvwEwbfbZ&_nc_oc=AdkFPbl7Qswpi3QqXpWGgTWjebmvD9Wtk7mMrHUgtWI6XqFxeq6LEILkIG8HpTg6Y1dGWA2IUcsweVG8bEBZW0We&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=D3K84ODHmA4BrSKRXWhBKA&_nc_ss=8&oh=00_AfsHrkJzr10gGWxV-PlFmdwuzc0Z_vI056cLx7Zb--ORbg&oe=69A87B85" alt="Post image">
-                    <div class="carousel-slide-content">
-                        <p class="post-date">24 Feb 2026</p>
-                        <p>Aquí la #tortamexicana sabe diferente… porque el pan lo hacemos nosotros y la frescura viene de la zona alta.
-
-📞 Restaurante al +503 7010 - 0373
-💬 ...</p>
-                        <a href="https://www.facebook.com/hotellapalma/posts/pfbid02eDw8T7rByLruTFJVCSPDw4wt1btAGkNKw7jGGn4mti8gtQRVNzuegGECr1oDsw14l" target="_blank" class="btn btn-outline" style="border-color: var(--color-accent-blue); color: var(--color-accent-blue); padding: 5px 15px; margin-top: 10px;">Ver en Facebook</a>
-                    </div>
-                </div>
-</div>
-            <button class="carousel-btn next-btn">&gt;</button>
-        </div>
-    </section>
 
     <!-- Footer Compartido -->
     <footer class="footer">
@@ -290,29 +362,30 @@ Te presentamos nuestro Salón Miramundo, el espacio ideal para:
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        // Carousel Script
+        // Hero Carousel Script
         document.addEventListener('DOMContentLoaded', function () {
-            const track = document.getElementById('carousel-track');
+            const track = document.getElementById('hero-carousel-track');
             if (!track) return;
             const slides = Array.from(track.children);
             if (slides.length === 0) return;
-            const nextButton = document.querySelector('.next-btn');
-            const prevButton = document.querySelector('.prev-btn');
+            const nextButton = document.querySelector('.hero-next-btn');
+            const prevButton = document.querySelector('.hero-prev-btn');
 
             let currentIndex = 0;
 
             function updateCarousel() {
                 const slideWidth = slides[0].getBoundingClientRect().width;
-                const style = window.getComputedStyle(track);
-                const gap = parseFloat(style.getPropertyValue('gap')) || 0;
-
-                track.style.transform = 'translateX(-' + (currentIndex * (slideWidth + gap)) + 'px)';
+                // Move the track by the width of one slide
+                track.style.transform = 'translateX(-' + (currentIndex * slideWidth) + 'px)';
             }
 
             nextButton.addEventListener('click', e => {
-                const maxIndex = window.innerWidth <= 600 ? slides.length - 1 : (window.innerWidth <= 900 ? slides.length - 2 : slides.length - 3);
-                if (currentIndex < maxIndex) {
+                if (currentIndex < slides.length - 1) {
                     currentIndex++;
+                    updateCarousel();
+                } else {
+                    // Si llega al final, vuelve al inicio para efecto loop manual
+                    currentIndex = 0;
                     updateCarousel();
                 }
             });
@@ -321,16 +394,23 @@ Te presentamos nuestro Salón Miramundo, el espacio ideal para:
                 if (currentIndex > 0) {
                     currentIndex--;
                     updateCarousel();
+                } else {
+                    currentIndex = slides.length - 1;
+                    updateCarousel();
                 }
             });
 
-            window.addEventListener('resize', () => {
-                const maxIndex = window.innerWidth <= 600 ? slides.length - 1 : (window.innerWidth <= 900 ? slides.length - 2 : slides.length - 3);
-                if (currentIndex > maxIndex) {
-                    currentIndex = maxIndex;
+            window.addEventListener('resize', updateCarousel);
+
+            // Auto slide every 7 seconds
+            setInterval(() => {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
                 }
                 updateCarousel();
-            });
+            }, 7000);
         });
     </script>
 </body>

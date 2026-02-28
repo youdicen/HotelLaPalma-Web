@@ -87,14 +87,20 @@ for post in items:
             
     post_url = post.get('url', '#')
     
-    slide_html = f'''                <div class="carousel-slide">
-                    <img src="{img_url}" alt="Post image">
-                    <div class="carousel-slide-content">
-                        <p class="post-date">{date_str}</p>
-                        <p>{text}</p>
-                        <a href="{post_url}" target="_blank" class="btn btn-outline" style="border-color: var(--color-accent-blue); color: var(--color-accent-blue); padding: 5px 15px; margin-top: 10px;">Ver en Facebook</a>
-                    </div>
-                </div>'''
+    slide_html = f'''            <div class="hero-slide">
+                <div class="hero-background" style="background-image: url('{img_url}');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 20px;">{date_str}</h2>
+                    <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 30px auto;">
+                        {text}
+                    </p>
+                    <a href="{post_url}" target="_blank" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 12px 30px; border: 2px solid var(--color-accent-blue); background-color: var(--color-accent-blue); color: var(--color-text-light);">
+                        Ver Novedad en Facebook
+                    </a>
+                </div>
+            </div>'''
     html_slides.append(slide_html)
     valid_posts += 1
 
@@ -109,10 +115,10 @@ try:
     with open('index.html', 'r', encoding='utf-8') as f:
         html = f.read()
 
-    # We use a regex that matches the insertion point, or replaces everything inside the track
-    pattern = re.compile(r'(<div class="carousel-track" id="carousel-track">)(.*?)(</div>\s*<button class="carousel-btn next-btn">)', re.DOTALL)
+    # We use a regex down from the insertion point to the end of the track to preserve the static slide
+    pattern = re.compile(r'(<!-- AUTOMATIC_HERO_CAROUSEL_INSERTION_POINT -->)(.*?)(</div>\s*<button class="hero-carousel-btn hero-next-btn">)', re.DOTALL)
     
-    new_html = pattern.sub(r'\1\n<!-- AUTOMATIC_CAROUSEL_INSERTION_POINT -->\n' + slides_combined + r'\n\3', html)
+    new_html = pattern.sub(r'\1\n' + slides_combined + r'\n\3', html)
     
     with open('index.html', 'w', encoding='utf-8') as f:
         f.write(new_html)
